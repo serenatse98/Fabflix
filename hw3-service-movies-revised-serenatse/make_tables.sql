@@ -1,0 +1,97 @@
+USE basicdb;
+
+-- DROP TABLE IF EXISTS ___;
+-- CREATE TABLE IF NOT EXISTS ___
+-- (
+-- );
+
+DROP TABLE IF EXISTS genres;
+CREATE TABLE IF NOT EXISTS genres
+(
+	id 		INT 			PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	name 	VARCHAR(32) 	NOT NULL
+);
+
+DROP TABLE IF EXISTS movies;
+CREATE TABLE IF NOT EXISTS movies
+(
+	id 				VARCHAR(10) 	PRIMARY KEY NOT NULL,
+	title	 		VARCHAR(100) 	NOT NULL,
+	year			INT				NOT NULL,
+	director		VARCHAR(100)	NOT NULL,
+	backdrop_path	VARCHAR(256)	NULL,
+	budget			INT				DEFAULT 0 NULL,
+	overview 		VARCHAR(8192)	NULL,
+	poster_path		VARCHAR(256)	NULL,
+	revenue			INT				DEFAULT 0 NULL,
+	hidden			INT				DEFAULT 0 NULL
+);
+
+DROP TABLE IF EXISTS genres_in_movies;
+CREATE TABLE IF NOT EXISTS genres_in_movies
+(
+	genreId		INT				NOT NULL,
+	movieId		VARCHAR(10)		NOT NULL,
+
+	PRIMARY KEY (genreId, movieId),
+
+	FOREIGN KEY (genreId)
+		REFERENCES genres(id)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE,
+
+	FOREIGN KEY (movieId)
+		REFERENCES movies(id)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
+);
+
+CREATE INDEX movieId
+	ON genres_in_movies (movieId);
+
+DROP TABLE IF EXISTS ratings;
+CREATE TABLE IF NOT EXISTS ratings
+(
+	movieId 	VARCHAR(10)		NOT NULL,
+	rating 		FLOAT			NOT NULL,
+	numVotes	INT				NOT NULL,
+
+	FOREIGN KEY (movieId)
+		REFERENCES movies(id)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
+);
+
+DROP TABLE IF EXISTS stars;
+CREATE TABLE IF NOT EXISTS stars
+(
+	id			VARCHAR(10)		PRIMARY KEY NOT NULL,
+	name		VARCHAR(100) 	NOT NULL,
+	birthYear	INT				NULL
+
+);
+
+DROP TABLE IF EXISTS stars_in_movies;
+CREATE TABLE IF NOT EXISTS stars_in_movies
+(
+	starId 		VARCHAR(10) 	NOT NULL,
+	movieId		VARCHAR(10) 	NOT NULL,
+
+	PRIMARY KEY (starId, movieId),
+
+	FOREIGN KEY (starID)
+		REFERENCES stars(id)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE,
+
+	FOREIGN KEY (movieId)
+		REFERENCES movies(id)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
+);
+
+CREATE INDEX movieId
+	ON stars_in_movies (movieId);
+
+
+
