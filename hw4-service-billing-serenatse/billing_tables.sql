@@ -1,0 +1,63 @@
+USE cs122b_db143;
+
+-- DROP TABLE IF EXISTS _____;
+-- CREATE TABLE IF NOT EXISTS _____
+-- (
+-- );
+
+DROP TABLE IF EXISTS carts;
+CREATE TABLE IF NOT EXISTS carts
+(
+	id	 		INT 			PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	email 		VARCHAR(50) 	NOT NULL,
+	movieId		VARCHAR(10)		NOT NULL,
+	quantity	INT 			NOT NULL,
+	UNIQUE (email, movieId)
+);
+
+DROP TABLE IF EXISTS creditcards;
+CREATE TABLE IF NOT EXISTS creditcards
+(
+	id 			VARCHAR(20)		PRIMARY KEY NOT NULL,
+	firstName	VARCHAR(50) 	NOT NULL,
+	lastName	VARCHAR(50)		NOT NUll,
+	expiration	DATE 			NOT NULL
+);
+
+DROP TABLE IF EXISTS customers;
+CREATE TABLE IF NOT EXISTS customers
+(
+	email		VARCHAR(50) 	PRIMARY KEY NOT NULL,
+	firstName 	VARCHAR(50) 	NOT NULL,
+	lastName	VARCHAR(50)		NOT NULL,
+	ccId		VARCHAR(20)		NOT NULL,
+	address		VARCHAR(200)	NOT NULL,
+
+	FOREIGN KEY (ccId)
+		REFERENCES creditcards(id)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
+);
+
+DROP TABLE IF EXISTS sales;
+CREATE TABLE IF NOT EXISTS sales
+(
+	id 			INT 			PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	email		VARCHAR(50)		NOT NULL,
+	movieId		VARCHAR(10) 	NOT NULL,
+	quantity	INT 			NOT NULL,
+	saleDate	DATE 			NOT NULL,
+
+	FOREIGN KEY (email)
+		REFERENCES customers(email)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
+);
+
+
+
+
+
+
+
+
