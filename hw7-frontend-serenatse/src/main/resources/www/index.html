@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<head>
+    <title>FABFLIX</title>
+    <meta charset="utf-8">
+    <!--  CSS / Styles  -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/login_register.css">
+    <link rel="stylesheet" type="text/css" href="css/movies/movieTable.css">
+    <link rel="stylesheet" type="text/css" href="css/movies/movieDetails.css">
+    <link rel="stylesheet" type="text/css" href="css/homePage.css">
+    <!-- Icons/Images -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/791359c156.js"></script>
+
+    <!-- Scripts -->
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Javascripts -->
+    <script src="js/movies/search.js?20190605" type="text/javascript" defer="defer"></script>
+    <script src="js/constants.js" type="text/javascript" defer="defer"></script>
+    <script src="js/login.js" type="text/javascript" defer="defer"></script>
+    <script src="js/register.js" type="text/javascript" defer="defer"></script>
+    <script src="js/movies/advSearch.js?20190605" type="text/javascript" defer="defer"></script>
+    <script src="js/billing/cartView.js" type="text/javascript" defer="defer"></script>
+    <script src="js/billing/checkout.js" type="text/javascript" defer="defer"></script>
+    <script src="js/billing/orderHistory.js" type="text/javascript" defer="defer"></script>
+
+    <script src="js/cookie.js" type="text/javascript" defer="defer"></script>
+    <script src="js/getReport.js" type="text/javascript" defer="defer"></script>
+    <script src="js/Report.js" type="text/javascript" defer="defer"></script>
+
+</head>
+
+<body>
+<div class="header">
+    <header>
+        <h1>FABFLIX</h1>
+    </header>
+</div>
+
+<div class="topNav">
+    <ul>
+        <li><a href="index.html" id="homePage">Home</a></li>
+        <li><a id="browseMoviesPage">Browse Movies</a></li>
+        <script>
+            $("#browseMoviesPage").click( function () {
+                $(".main").load("../html/movies/browseMovies.html");
+            });
+        </script>
+        <li><a id="advSearchPage">Advanced Search</a></li>
+        <script>
+            $("#advSearchPage").click( function () {
+                $(".main").load("../html/movies/advSearch.html");
+            });
+        </script>
+
+        <div class="topnav-right">
+            <li>
+                <div class="search">
+                    <form id="quick-search">
+                        <input class="search-text" type="text" name="" placeholder="Search Movies">
+                        <button id="searchBtn" type="submit" class="search-btn">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <script>
+                            $("#searchBtn").click( function () {
+                                $(".main").load("../html/movies/searchMovie.html");
+                            });
+                        </script>
+                    </form>
+                </div>
+            </li>
+
+            <li><a id="loginPage">Login</a></li>
+            <script>
+                $("#loginPage").click( function () {
+                    $(".main").load("../html/login.html");
+                });
+            </script>
+
+            <li>
+                <a id="cartBtn">
+                    <i class="fa fa-shopping-cart"></i>
+                </a>
+            </li>
+            <script>
+                $("#cartBtn").click( function () {
+                    $(".main").load("../html/billing/shoppingCart.html");
+                });
+            </script>
+        </div>
+    </ul>
+</div>
+
+
+<div class="main">
+
+    <div class="main-heading">
+        <h2 style="text-align: center">Welcome to FABFLIX!</h2>
+        <h3 style="text-align: center">Buy movies at discounted prices!</h3>
+        <p style="text-align: center">EVERY MOVIE HAS A DISCOUNT!!</p>
+    </div>
+
+    <div class="buttons-main">
+        <button class="main-Btn" id="browseBtn">
+            <i class="fas fa-ticket-alt fa-3x"></i><br>
+            <span class="btnText">BROWSE</span>
+        </button>
+        <script>
+            $("#browseBtn").click( function () {
+                $(".main").load("../html/movies/browseMovies.html");
+            });
+        </script>
+
+        <button class="main-Btn" id="searchButton">
+            <i class="fas fa-search fa-3x"></i><br>
+            <span class="btnText">SEARCH</span>
+        </button>
+        <script>
+            $("#searchButton").click( function () {
+                $(".main").load("../html/movies/advSearch.html");
+            });
+        </script>
+
+    </div>
+
+    <div class="buttons-main">
+        <button class="main-Btn" id="cartButton">
+            <i class="fas fa-shopping-cart fa-3x" id="buttonCartIcon"></i><br>
+            <span class="btnText"> CART</span>
+        </button>
+        <script>
+            $("#cartButton").click( function () {
+                $(".main").load("../html/billing/shoppingCart.html");
+            });
+        </script>
+
+        <button class="main-Btn" id="loginButton">
+            <i class="far fa-user fa-3x" id="buttonSearchIcon"></i><br>
+            <span class="btnText">LOGIN</span>
+        </button>
+        <script>
+            $("#loginButton").click( function () {
+                $(".main").load("../html/login.html");
+            });
+        </script>
+    </div>
+
+</div>
+
+</body>

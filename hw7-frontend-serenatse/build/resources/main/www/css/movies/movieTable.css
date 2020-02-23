@@ -1,0 +1,27 @@
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+td, th {
+    text-align: left;
+    border: 2px solid steelblue;
+    padding: 5px
+}
+
+th {
+    font-size: 20px;
+}
+
+a:hover {
+    cursor: pointer;
+    font-weight: 900;
+    color: navy;
+}
+
+#movie-header {
+    text-align: center;
+
+}

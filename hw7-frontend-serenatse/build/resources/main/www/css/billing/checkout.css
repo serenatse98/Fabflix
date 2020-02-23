@@ -1,0 +1,40 @@
+#checkoutHeader {
+    text-align: center;
+}
+
+#ckout-loading {
+    text-align: center;
+}
+
+
+
+#paypalDiv {
+    align-items: center;
+}
+
+#paypalBtn {
+    font-family: "Roboto", sans-serif;
+    background: #4682B4;
+    width: 10%;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 45%;
+    margin-left: 45%;
+}
+
+#paypalBtn:hover {
+    background: #3361b4;
+}
+
+
+
+#thankyou-text {
+    text-align: center;
+    color: #3361b4;
+}
+
+#thankyou-head {
+    font-size: larger;
+}

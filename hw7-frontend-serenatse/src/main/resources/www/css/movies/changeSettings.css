@@ -1,0 +1,61 @@
+#changeSettings{
+    margin-left: 38%;
+    display: inline;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+/* CHANGE LIMIT */
+#limit-label {
+    display: inline;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+#change-limit {
+    font-size: 13px;
+    padding-bottom: 20px;
+}
+
+/* CHANGE OFFSET */
+#offset-label {
+    display: inline;
+    text-align: center;
+    padding-left: 20px;
+    padding-bottom: 20px;
+
+}
+
+#change-offset {
+    font-size: 13px;
+    width: 50px;
+}
+
+
+/* CHANGE RATING/TITLE */
+#sortby-label {
+    display: inline;
+    margin-left: 40%;
+    padding-bottom: 10px;
+}
+
+#ratingSort-asc {
+    display: inline;
+}
+
+#ratingSort-desc {
+    display: inline;
+}
+
+.line {
+    display: inline;
+}
+
+#titleSort-asc {
+    display: inline;
+    margin-left: 43%;
+}
+
+#titleSort-desc {
+    display: inline;
+}

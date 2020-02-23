@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/login.js" type="text/javascript" defer="defer"></script>
+    <title>Login</title>
+</head>
+<body>
+<div class="login-page">
+    <div class="form">
+        <form class="login-form">
+            <h3>Sign in</h3>
+            <input id="login-email" type="text" placeholder="email" required/>
+            <input id="login-password" type="password" placeholder="password" required/>
+            <button id="loginBtn">LOGIN</button>
+            <p class="message">Not registered? <a id="register">Create an account</a></p>
+            <script>
+                $(function () {
+                    $("#register").click( function () {
+                        $(".main").load("../html/register.html");
+                    });
+                });
+            </script>
+        </form>
+    </div>
+</div>
+
+<div id="register-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Modal Header</h2>
+        </div>
+        <div class="modal-body">
+            <p id="modal-body">Body of Modal</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

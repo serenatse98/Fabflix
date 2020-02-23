@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../../js/movies/advSearch.js" type="text/javascript" defer="defer"></script>
+    <title>AdvSearch</title>
+</head>
+<body>
+
+<h2 id="advSearchHeader">ADVANCED SEARCH</h2>
+
+<div class="advSearch-page">
+    <div class="form">
+        <form id="advSearchForm">
+            <input id="search-title" type="text" name="title" placeholder="title"/>
+            <input id="search-director" type="text" placeholder="director"/>
+            <input id="search-year" type="text" placeholder="year"/>
+            <input id="search-genre" type="text" placeholder="genre"/>
+            <button id="advSearchBtn" type="submit">SEARCH</button>
+            <script>
+                $("#advSearchBtn").click( function () {
+                    $(".main").load("../../html/movies/searchMovie.html");
+                });
+            </script>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

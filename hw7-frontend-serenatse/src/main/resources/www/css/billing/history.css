@@ -1,0 +1,66 @@
+table {
+    table-layout:fixed;
+}
+
+th {
+    font-size: 18px;
+    text-align: center;
+    border: none;
+}
+
+td {
+    border: none;
+    word-wrap:break-word;
+}
+
+tr:nth-child(odd) {
+    border-bottom: 1px solid #ccc;
+}
+
+#saleDateHeader {
+    text-align: left;
+}
+
+#totalHeader {
+    text-align: right;
+}
+
+#saleDate {
+    white-space: pre;
+}
+
+#items {
+    padding: 0;
+}
+
+#total {
+    text-align: right;
+}
+
+#tId-Fee {
+    font-size: 12px;
+    column-span: 3;
+    white-space: pre;
+}
+
+
+/* ITEM TABLE */
+.itemHeader {
+    font-size: 13px;
+    border-bottom: 1px solid #ccc;
+}
+
+#itemsTable {
+    width: 100%;
+    padding: 0;
+}
+
+.itemData {
+    font-size: 13px;
+    text-align: center;
+}
+
+#itemHeadText {
+    border: none;
+    /*border-bottom: 1px solid #ccc;*/
+}

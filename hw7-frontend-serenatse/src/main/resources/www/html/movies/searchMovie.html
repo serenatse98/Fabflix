@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../css/movies/movieDetails.css">
+    <link rel="stylesheet" type="text/css" href="../../css/movies/pagination.css">
+    <link rel="stylesheet" type="text/css" href="../../css/movies/changeSettings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../../js/movies/search.js" type="text/javascript" defer="defer"></script>
+    <script src="../../js/billing/cartView.js" type="text/javascript" defer="defer"></script>
+    <script src="../../js/movies/searchPagination.js" type="text/javascript" defer="defer"></script>
+    <script src="../../js/movies/changeSettings.js" type="text/javascript" defer="defer"></script>
+    <title>Search Movie</title>
+</head>
+<body id="searchMovieBody">
+
+<h3 id="movie-header">Finding Movies...</h3>
+
+<div id="changeSettings">
+    <p id="limit-label">Limit: </p>
+    <select onchange="limitChange(this)" id="change-limit">
+        <option value="10">10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+    </select>
+
+    <p id="offset-label">Offset: </p>
+    <input id="change-offset" type="text" value="0"/>
+    <button id="changeOffsetBtn" type="submit">OK</button>
+
+    <br>
+    <p id="sortby-label">Sort by: </p>
+    <a id="ratingSort-desc">Best Rated</a> <p class="line"> | </p>
+    <a id="ratingSort-asc">Worst Rated</a>
+    <br>
+    <a id="titleSort-asc">Title (A-Z)</a> <p class="line"> | </p>
+    <a id="titleSort-desc">Title (Z-A)</a>
+
+</div>
+
+
+<div class="movies"></div>
+
+<div class="pagination">
+    <a id="backPage">&laquo;</a>
+    <a id="nextPage">&raquo;</a>
+</div>
+
+
+<div id="movieDetailModal" class="modalDetail">
+    <div class="modalDetail-content">
+        <span class="modalDetail-close">&times;</span>
+        <h1 id="movieDetail-title">Movie Title</h1>
+        <h2 id="rating">Rating</h2>
+        <p id="numVotes">NumVotes</p>
+        <form id="rateMovie">
+            Rate Movie:
+            <input id="userRating" type="number" step="0.1" min="0" max="10" value="" required/>
+            <button id="rateButton" type="submit">Rate</button>
+        </form>
+        <p id="movie-overview"></p>
+        <p id="movie-director">Director</p>
+        <p id="movie-stars"></p>
+        <p id="movie-genres"></p>
+
+        <p id="movie-revenue"></p>
+        <p id="movie-budget"></p>
+
+        <form id="addToCartForm">
+            Quantity:
+            <input id="quantity" type="number" min="1" value="1" required/>
+            <button id="addToCart" type="submit">ADD TO CART</button>
+        </form>
+
+        <div id="addCart-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2 id="modal-title">Modal Header</h2>
+                </div>
+                <div class="modal-body">
+                    <p id="modal-body">Body of Modal</p>
+                    <a id="goToCart"><i class="fa fa-shopping-cart"></i> Go To Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="rate-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2 id="rate-modal-title">Modal Header</h2>
+                </div>
+                <div class="modal-body">
+                    <p id="rate-modal-body">Body of Modal</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>

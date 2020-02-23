@@ -1,0 +1,36 @@
+.fa-shopping-cart {
+    color: steelblue;
+}
+
+/* MAIN BUTTONS */
+.buttons-main {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.main-Btn {
+    background-color: #333;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+    transition: 0.4s;
+
+    width: 300px;
+    height: 300px;
+}
+
+#buttonSearchIcon {
+    color: white;
+}
+
+#buttonCartIcon {
+    color: white
+}
+
+.main-Btn:hover {
+    background-color: black
+}
