@@ -1,0 +1,381 @@
+[2019/04/14 14:25:21][CONFIG][initLogger]  Logging initialized.
+[2019/04/14 14:25:21][CONFIG][initService]  Starting service...
+[2019/04/14 14:25:21][CONFIG][currentConfigs]  Scheme: http://
+[2019/04/14 14:25:21][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2019/04/14 14:25:21][CONFIG][currentConfigs]  Port: 7178
+[2019/04/14 14:25:21][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2019/04/14 14:25:21][CONFIG][currentConfigs]  Logger output file: basicService.log
+[2019/04/14 14:25:21][CONFIG][currentConfigs]  Database username: cs122b_db143
+[2019/04/14 14:25:21][CONFIG][currentConfigs]  Database password provided?: true
+[2019/04/14 14:25:21][CONFIG][currentConfigs]  Database hostname: localhost
+[2019/04/14 14:25:21][CONFIG][currentConfigs]  Database port: 3307
+[2019/04/14 14:25:21][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[2019/04/14 14:25:21][CONFIG][currentConfigs]  Database name: cs122b_db143
+[2019/04/14 14:25:21][CONFIG][connectToDatabase]  Connecting to database...
+[2019/04/14 14:25:21][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://localhost:3307/cs122b_db143?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/04/14 14:25:21][CONFIG][connectToDatabase]  Connected to database: com.mysql.cj.jdbc.ConnectionImpl@1f1c7bf6
+[2019/04/14 14:25:21][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2019/04/14 14:25:22][CONFIG][initHTTPServer]  HTTP server started.
+[2019/04/14 14:25:22][CONFIG][initService]  Service initialized.
+[2019/04/14 14:25:30][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:25:30][INFO][validateString]  {"input":"","len":40}
+[2019/04/14 14:25:30][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:25:30][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:25:30][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:25:30][INFO][validateString]  Sentence is empty.
+[2019/04/14 14:25:30][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:25:39][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:25:39][INFO][validateString]  {"input":"oJvvgMFYSxLbtcmtNgnOgFfCFNdAnvtRRcHJqbGrPLXcTrEtyWkeyIUlvzNDguSa QOfGbrhk xJSaF","len":-1}
+[2019/04/14 14:25:39][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:25:39][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:25:39][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:25:39][INFO][validateString]  Entered length is negative.
+[2019/04/14 14:25:39][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:07][INFO][helloWorld]  Hello!
+[2019/04/14 14:26:07][INFO][getNumRequest]  Received request for number of records.
+[2019/04/14 14:26:07][INFO][getNumRequest]  Retrieving sentences...
+[2019/04/14 14:26:07][INFO][getAllSentencesFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cs122b_db143.valid_strings
+[2019/04/14 14:26:07][INFO][getAllSentencesFromDB]  Query Success. 
+[2019/04/14 14:26:07][INFO][addToArray]  Retrieved sentence ID: 1; Sentence: Lorem ipsum dapibus purus a suscipit elit risus ac cras orci ad.; Length: 12
+[2019/04/14 14:26:07][INFO][addToArray]  Retrieved sentence ID: 2; Sentence: Etiam vulputate lobortis ultricies gravida fusce.; Length: 6
+[2019/04/14 14:26:07][INFO][addToArray]  Retrieved sentence ID: 3; Sentence: Taciti vulputate magna ornare macenas dui, donec morbi suspendisse turpis urna, turpis in tempor por.; Length: 15
+[2019/04/14 14:26:07][INFO][buildModelFromList]  Creating model...
+[2019/04/14 14:26:07][INFO][buildModelFromList]  Sentence list is not empty...
+[2019/04/14 14:26:07][INFO][buildModelFromList]  Adding sentence #1 to array.
+[2019/04/14 14:26:07][INFO][buildModelFromList]  Adding sentence #2 to array.
+[2019/04/14 14:26:07][INFO][buildModelFromList]  Adding sentence #3 to array.
+[2019/04/14 14:26:07][INFO][buildModelFromList]  Finished building model. Sentences array contains: 
+[2019/04/14 14:26:07][INFO][buildModelFromList]  	ID: 1; Sentence: Lorem ipsum dapibus purus a suscipit elit risus ac cras orci ad.; Length: 12
+[2019/04/14 14:26:07][INFO][buildModelFromList]  	ID: 2; Sentence: Etiam vulputate lobortis ultricies gravida fusce.; Length: 6
+[2019/04/14 14:26:07][INFO][buildModelFromList]  	ID: 3; Sentence: Taciti vulputate magna ornare macenas dui, donec morbi suspendisse turpis urna, turpis in tempor por.; Length: 15
+[2019/04/14 14:26:07][INFO][getNumRequest]  Sentences retrieved.
+[2019/04/14 14:26:07][INFO][isValid]  sentences == null? false
+[2019/04/14 14:26:07][INFO][isValid]  sentences.length > 0? true
+[2019/04/14 14:26:07][INFO][getNumRequest]  Creating new num response model.
+[2019/04/14 14:26:07][INFO][getNumRequest]  ResponseModel data is valid.
+[2019/04/14 14:26:07][INFO][getSentenceFromID]  Received request for sentence with id#3
+[2019/04/14 14:26:07][INFO][getSentenceFromID]  Retrieving sentences...
+[2019/04/14 14:26:07][INFO][getSentenceFromID]  Finding sentence from given id...
+[2019/04/14 14:26:07][INFO][getSentenceFromID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cs122b_db143.valid_strings WHERE id = 3;
+[2019/04/14 14:26:07][INFO][getSentenceFromID]  Query succeeded
+[2019/04/14 14:26:07][INFO][addToArray]  Retrieved sentence ID: 3; Sentence: Taciti vulputate magna ornare macenas dui, donec morbi suspendisse turpis urna, turpis in tempor por.; Length: 15
+[2019/04/14 14:26:07][INFO][buildModelFromList]  Creating model...
+[2019/04/14 14:26:07][INFO][buildModelFromList]  Sentence list is not empty...
+[2019/04/14 14:26:07][INFO][buildModelFromList]  Adding sentence #3 to array.
+[2019/04/14 14:26:07][INFO][buildModelFromList]  Finished building model. Sentences array contains: 
+[2019/04/14 14:26:07][INFO][buildModelFromList]  	ID: 3; Sentence: Taciti vulputate magna ornare macenas dui, donec morbi suspendisse turpis urna, turpis in tempor por.; Length: 15
+[2019/04/14 14:26:07][INFO][getSentenceFromID]  Sentences retrieved.
+[2019/04/14 14:26:07][INFO][isValid]  sentences == null? false
+[2019/04/14 14:26:07][INFO][isValid]  sentences.length > 0? true
+[2019/04/14 14:26:07][INFO][getSentenceFromID]  Retrieving single sentence...
+[2019/04/14 14:26:07][INFO][getSentenceFromID]  Got sentence.
+[2019/04/14 14:26:07][INFO][getSentenceFromID]  Received request for sentence with id#999
+[2019/04/14 14:26:07][INFO][getSentenceFromID]  Retrieving sentences...
+[2019/04/14 14:26:07][INFO][getSentenceFromID]  Finding sentence from given id...
+[2019/04/14 14:26:07][INFO][getSentenceFromID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cs122b_db143.valid_strings WHERE id = 999;
+[2019/04/14 14:26:07][INFO][getSentenceFromID]  Query succeeded
+[2019/04/14 14:26:07][INFO][buildModelFromList]  Creating model...
+[2019/04/14 14:26:07][INFO][buildModelFromList]  Sentence list is not empty...
+[2019/04/14 14:26:07][INFO][buildModelFromList]  Finished building model. Sentences array contains: 
+[2019/04/14 14:26:07][INFO][getSentenceFromID]  Sentences retrieved.
+[2019/04/14 14:26:07][INFO][isValid]  sentences == null? false
+[2019/04/14 14:26:07][INFO][isValid]  sentences.length > 0? false
+[2019/04/14 14:26:07][INFO][getSentenceFromID]  No sentence found at id#999
+[2019/04/14 14:26:07][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:07][INFO][validateString]  {"input":"obWryqqJIElQFySAzWRgFvGzYxMTuNRaXFUkNPjHIovAiNilVZoizXjoTWUoyBjHrWVALTFEKaPqsPGjSqAoTjHCZqHeWl qvsFSvacRjbdqPmrEvkDLwjaVvpNnyXmTJminVu qEBhYUYXphUATTTSaTKsfCgidtqPzOLiCRPoibsqGwxVrXFvqnxtyteN B GGgqE","len":5}
+
+[2019/04/14 14:26:07][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:07][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:07][INFO][validateString]  sentence length matched inputted len
+[2019/04/14 14:26:07][INFO][validateString]  Inputting into database...
+[2019/04/14 14:26:07][INFO][insertSentenceIntoDB]  Inserting sentence into database...
+[2019/04/14 14:26:07][INFO][insertSentenceIntoDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cs122b_db143.valid_strings (sentence, length) VALUES ('obWryqqJIElQFySAzWRgFvGzYxMTuNRaXFUkNPjHIovAiNilVZoizXjoTWUoyBjHrWVALTFEKaPqsPGjSqAoTjHCZqHeWl qvsFSvacRjbdqPmrEvkDLwjaVvpNnyXmTJminVu qEBhYUYXphUATTTSaTKsfCgidtqPzOLiCRPoibsqGwxVrXFvqnxtyteN B GGgqE', 5)
+[2019/04/14 14:26:07][INFO][validateString]  Sentence entered into database.
+[2019/04/14 14:26:07][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:07][INFO][validateString]  {"input":"TyphlKcnDytElFqJYhNhLKvOuijTkFlfzlXxQCn KWXaRKFhDrfmlnMZIaTleyOFwK BPv QZR LsW h","len":13}
+
+[2019/04/14 14:26:07][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:07][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:07][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:07][INFO][validateString]  Sentence length does not match inputted len.
+[2019/04/14 14:26:07][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:07][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:07][INFO][validateString]  {"invalid-input":"rtYlewAeYCHkyIrEtZmIsFpOTMBBzWaMZNoSbGSpdPHroNdOAqzlqTSZgHlECDlpQuoOkHayOedkPZup SUpDOAsOrEXLKXVKftmeTOEqMxSyVe vPJs iZt ZTzIe","invalid-len":5}
+[2019/04/14 14:26:07][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:07][WARNING][validateString]  Unable to map JSON to POJO.
+[2019/04/14 14:26:07][INFO][validateString]  JSON not in correct format..
+[2019/04/14 14:26:07][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:07][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:07][INFO][validateString]  {"input":"KHGjsiqgilNnhaXqbMEtZEmXMurwcIutdrgLYYaSOaeZuxkyhBhRJlpjRjZJFTRbTIUpdxFHtJnaeLprKLcJrsiXtHTcAYfRYlMpfcYzbzOpBfObRmLeVgIeAJzvJIsrqYuwVZxgfulhBEDAEwjGHPfjPqZVkfQIusZWdRjAFoFWuKHxFIMxznqGIuYlmTVootyGWJPdAYPwyLSkhaZSfMtlpUizJdbzlpEFTbcIMomLzntJVlHuYEEuMIsubsqQghrFTqapzSpmdcWSEaTCvhyifzhHHeIGxXxJxaEopAufVmBtVMpvxCfUikFWCiCmIcnqOJcIfjZzgAxfMPZoZlugMPJBEmUYaGKrNlCYQsMRgErbIuZacGVY ipLxqyYbLvBrBCCfzNa ybDUH NCZAjIetjo d"}
+[2019/04/14 14:26:07][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:07][WARNING][validateString]  Unable to map JSON to POJO.
+[2019/04/14 14:26:07][INFO][validateString]  JSON not in correct format..
+[2019/04/14 14:26:07][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:07][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:07][INFO][validateString]  {"len":3}
+[2019/04/14 14:26:07][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:07][WARNING][validateString]  Unable to map JSON to POJO.
+[2019/04/14 14:26:07][INFO][validateString]  JSON not in correct format..
+[2019/04/14 14:26:07][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:07][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:07][INFO][validateString]  some_invalid_string_to_break_json{"input":"JyPx FfnujvNRnFbUMSRvIvRFVcVSNtImaagSsClLIIhqTzTxRHqxYxQmYeieaiCGuXhHgXZVBzVeNRCnQFUbUivzjuooDAUVJcbZjBQKlvRiuHLpTqJPLCbhpqYmNBHwoDSbOBsUuNjVAlkXEyGiGlBlDetDngJiSyYNONGFNKQhdlKZEbMGjFdZXmJBvsUIBPWErnkNMVPlYWzsVqyGACUFmLhdORApwqonfLYCXUnAghadYCCSiPzAahIUQHuRuSCIAYmCiMEfTbHSZNaBcnVEyZfUQbUqpVDPzifIDBnlzBPJvsBogfQEvLgZKhMtKUlJUKHWeMvkf UvayEPGvEeJFmkIcGlrvRMsRTScnNvtXbngYxZQCjYEvCyCToBQqYKGQoigxixibXceAvrJTjWIeiMMLkkopoPzTWdTjbRgvRmcFfvsqqD FZmWPbWX Gmmcu","len":5}
+[2019/04/14 14:26:07][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:07][WARNING][validateString]  Unable to parse JSON.
+[2019/04/14 14:26:07][INFO][validateString]  JSON not in correct format..
+[2019/04/14 14:26:07][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:08][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:08][INFO][validateString]  {"input":"vnyXoINiEoGQfnjERotBkCTEGJyUBLTpytabRWiURTkRpBIQsOOTPmYiTrxWECgFKoFxduqFICWwkXBEDtrnlUtdISZPEnVJkLMnzOpauvtfPfGwPaBaKUlkKmNEgjPQJIJgRjosNmucxmjUdLcoOuExXtArzxOvRBWpfJRIUvuWljdnNsvhIKetVVfyRfDFyKkCWS RbrRLczNWD NZRnzfrFVTdNkEC","len":-1}
+[2019/04/14 14:26:08][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:08][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:08][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:08][INFO][validateString]  Entered length is negative.
+[2019/04/14 14:26:08][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:08][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:08][INFO][validateString]  {"input":"","len":364}
+[2019/04/14 14:26:08][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:08][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:08][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:08][INFO][validateString]  Sentence is empty.
+[2019/04/14 14:26:08][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:08][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:08][INFO][validateString]  {"input":"HWcKgnbeYLmbxlnvebyRzEeDBdfjcpQnahoSTmJApgtggjxTszsKbIOCtAzTtqlEaWJinCKZTYFnskmVirQIsRzgNPmGpaYlJEAxPxGRsnlUeHgTrswOpiwfLaMnxqSATAHQwVmQIUHSTGRiHrFHItYRahGaDGngwigxSfAlDCDwXzVlBjqWDRMAYJuzORVgsZbqAulGXYxmikUFPFcIzteihTitPkqaDyhAoiwsOZ hqFvvugZTlSRFOCaejqiaEvXrDMqEFBThxdiSklltrSvQBwnhrUJhKPPjsnSvXRcILEGjWlpOPYPWLCcqhFCnnQfrRYGbLMltjFubEQcntwpDztgQOqUdaPOgleHmdTQeYFRGEcrAWXInQrJrusfRzTSrUlSxMgUwiXMeZFhdsuCsGilnxpsoiRHWXwLrBCZOZrCjqYYhSmYyDKIGvYHyhBDdAwutkKeOlfjSPhCsXXyqtBmFoRUZYNpRLhoYnfDzkmIoISPNsPRBZdgToWMNUUCXJrKIxkoQnlBUJdmEQqyhlwkRuNWdhxlSMnigzdhQB Z LKPUFQggTSDkPoaBLfdYlwYJlqLLXTVosgtBigmk","len":4}
+[2019/04/14 14:26:08][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:08][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:08][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:08][INFO][validateString]  Input string is over 512 chars.
+[2019/04/14 14:26:08][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:08][INFO][helloWorld]  Hello!
+[2019/04/14 14:26:08][INFO][getNumRequest]  Received request for number of records.
+[2019/04/14 14:26:08][INFO][getNumRequest]  Retrieving sentences...
+[2019/04/14 14:26:08][INFO][getAllSentencesFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cs122b_db143.valid_strings
+[2019/04/14 14:26:08][INFO][getAllSentencesFromDB]  Query Success. 
+[2019/04/14 14:26:08][INFO][addToArray]  Retrieved sentence ID: 1; Sentence: Lorem ipsum dapibus purus a suscipit elit risus ac cras orci ad.; Length: 12
+[2019/04/14 14:26:08][INFO][addToArray]  Retrieved sentence ID: 2; Sentence: Etiam vulputate lobortis ultricies gravida fusce.; Length: 6
+[2019/04/14 14:26:08][INFO][addToArray]  Retrieved sentence ID: 3; Sentence: Taciti vulputate magna ornare macenas dui, donec morbi suspendisse turpis urna, turpis in tempor por.; Length: 15
+[2019/04/14 14:26:08][INFO][addToArray]  Retrieved sentence ID: 4; Sentence: obWryqqJIElQFySAzWRgFvGzYxMTuNRaXFUkNPjHIovAiNilVZoizXjoTWUoyBjHrWVALTFEKaPqsPGjSqAoTjHCZqHeWl qvsFSvacRjbdqPmrEvkDLwjaVvpNnyXmTJminVu qEBhYUYXphUATTTSaTKsfCgidtqPzOLiCRPoibsqGwxVrXFvqnxtyteN B GGgqE; Length: 5
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Creating model...
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Sentence list is not empty...
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Adding sentence #1 to array.
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Adding sentence #2 to array.
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Adding sentence #3 to array.
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Adding sentence #4 to array.
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Finished building model. Sentences array contains: 
+[2019/04/14 14:26:08][INFO][buildModelFromList]  	ID: 1; Sentence: Lorem ipsum dapibus purus a suscipit elit risus ac cras orci ad.; Length: 12
+[2019/04/14 14:26:08][INFO][buildModelFromList]  	ID: 2; Sentence: Etiam vulputate lobortis ultricies gravida fusce.; Length: 6
+[2019/04/14 14:26:08][INFO][buildModelFromList]  	ID: 3; Sentence: Taciti vulputate magna ornare macenas dui, donec morbi suspendisse turpis urna, turpis in tempor por.; Length: 15
+[2019/04/14 14:26:08][INFO][buildModelFromList]  	ID: 4; Sentence: obWryqqJIElQFySAzWRgFvGzYxMTuNRaXFUkNPjHIovAiNilVZoizXjoTWUoyBjHrWVALTFEKaPqsPGjSqAoTjHCZqHeWl qvsFSvacRjbdqPmrEvkDLwjaVvpNnyXmTJminVu qEBhYUYXphUATTTSaTKsfCgidtqPzOLiCRPoibsqGwxVrXFvqnxtyteN B GGgqE; Length: 5
+[2019/04/14 14:26:08][INFO][getNumRequest]  Sentences retrieved.
+[2019/04/14 14:26:08][INFO][isValid]  sentences == null? false
+[2019/04/14 14:26:08][INFO][isValid]  sentences.length > 0? true
+[2019/04/14 14:26:08][INFO][getNumRequest]  Creating new num response model.
+[2019/04/14 14:26:08][INFO][getNumRequest]  ResponseModel data is valid.
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Received request for sentence with id#3
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Retrieving sentences...
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Finding sentence from given id...
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cs122b_db143.valid_strings WHERE id = 3;
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Query succeeded
+[2019/04/14 14:26:08][INFO][addToArray]  Retrieved sentence ID: 3; Sentence: Taciti vulputate magna ornare macenas dui, donec morbi suspendisse turpis urna, turpis in tempor por.; Length: 15
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Creating model...
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Sentence list is not empty...
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Adding sentence #3 to array.
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Finished building model. Sentences array contains: 
+[2019/04/14 14:26:08][INFO][buildModelFromList]  	ID: 3; Sentence: Taciti vulputate magna ornare macenas dui, donec morbi suspendisse turpis urna, turpis in tempor por.; Length: 15
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Sentences retrieved.
+[2019/04/14 14:26:08][INFO][isValid]  sentences == null? false
+[2019/04/14 14:26:08][INFO][isValid]  sentences.length > 0? true
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Retrieving single sentence...
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Got sentence.
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Received request for sentence with id#999
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Retrieving sentences...
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Finding sentence from given id...
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cs122b_db143.valid_strings WHERE id = 999;
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Query succeeded
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Creating model...
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Sentence list is not empty...
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Finished building model. Sentences array contains: 
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Sentences retrieved.
+[2019/04/14 14:26:08][INFO][isValid]  sentences == null? false
+[2019/04/14 14:26:08][INFO][isValid]  sentences.length > 0? false
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  No sentence found at id#999
+[2019/04/14 14:26:08][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:08][INFO][validateString]  {"input":"WyALKnhOQYAKMAuZFIKoJFmLzIEgRBMelISQgDMayWrUYkJFsiKRSwvCBnpRtKGaYTBH f kEoCflWMWLPPTUaUrWxIUyhepCkZfztWmWkEsGHk WVsSkxOHwfUfthE","len":4}
+
+[2019/04/14 14:26:08][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:08][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:08][INFO][validateString]  sentence length matched inputted len
+[2019/04/14 14:26:08][INFO][validateString]  Inputting into database...
+[2019/04/14 14:26:08][INFO][insertSentenceIntoDB]  Inserting sentence into database...
+[2019/04/14 14:26:08][INFO][insertSentenceIntoDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cs122b_db143.valid_strings (sentence, length) VALUES ('WyALKnhOQYAKMAuZFIKoJFmLzIEgRBMelISQgDMayWrUYkJFsiKRSwvCBnpRtKGaYTBH f kEoCflWMWLPPTUaUrWxIUyhepCkZfztWmWkEsGHk WVsSkxOHwfUfthE', 4)
+[2019/04/14 14:26:08][INFO][validateString]  Sentence entered into database.
+[2019/04/14 14:26:08][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:08][INFO][validateString]  {"input":"vEaElOlVGVtmnNltLXhwkrsapGeUDfpsTGGKetwADQklCVcgJOUzItxTXkvMiORyfKxeqQyMirfIQHzfYLByZaVMplBQgUOxsMfFierTbYKovSqenKzKtyunfGplpJsSEU PoiOdAgvaHZNkxLlgxJYgrcEBEhEOAMJRjuhVqmiewJJAHFCTAcrDuKZdXtePTjbiKsXJkYEcHUZqSQDAYKIfALqoxKDK aOXlFTVZyKtiXSkxWilQimbrHvhGJtGcQrkzlFhjRcEdeKiAdGneaKTRylJCaoF k k","len":15}
+
+[2019/04/14 14:26:08][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:08][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:08][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:08][INFO][validateString]  Sentence length does not match inputted len.
+[2019/04/14 14:26:08][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:08][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:08][INFO][validateString]  {"invalid-input":"okZXNNBgczvjgkRjyIrFQKSghEEyYbCyYwpBOUpdTFHXmKQhfGFaRIphUofRSujxdoBzMVRDGAVADdlbTHmiJXepuwNRwkWMIuPdrIpXkwzAHXxRfuzsmjKyOsqmVpQazkbVZuazmuckxOpAwEOvirKmZaXGQJhRnKRDQcBuyPtxlHziucfZnFZayOOopnPlzsehrDGhWAlULPgJiOkLhczn faLcFolRlOEScLNgXgbIKavOkiPdUoUUpManIoAgntivLKKMMGzcIrhOfoKdpEzVaFqLihVxoq Y DpPMwoxkSeRDGowE aUPxJkfCSme J","invalid-len":6}
+[2019/04/14 14:26:08][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:08][WARNING][validateString]  Unable to map JSON to POJO.
+[2019/04/14 14:26:08][INFO][validateString]  JSON not in correct format..
+[2019/04/14 14:26:08][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:08][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:08][INFO][validateString]  {"input":"SbtiQBgowucYtIVvjUIvMgazxKuHMaCbKKFOxgeWAiSdFXlzvUPoDsGbsulgWnKodwhArkOPavMhzNcHmHKWggwlyELfzWhCTArAtlqaReawWSSSmwxislIYnyPGxOuonreTpQCXxSuWphRGLNHvVuIpdeiaqivzXIBIxJrTPpcLaCBdqEYIEnoepBFQWdwRGDPMEmPMwweqYsoULLbBtXGwzZulK KMkrdlMhHUrabGxbtFHYFezMUZwBQXumMkAzQPDjurDSlOTcCYsDxcsNMBcZlEQffnSHEoJySWnZlPTVvEHVYITHlNlEHNkOWzDE k"}
+[2019/04/14 14:26:08][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:08][WARNING][validateString]  Unable to map JSON to POJO.
+[2019/04/14 14:26:08][INFO][validateString]  JSON not in correct format..
+[2019/04/14 14:26:08][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:08][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:08][INFO][validateString]  {"len":8}
+[2019/04/14 14:26:08][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:08][WARNING][validateString]  Unable to map JSON to POJO.
+[2019/04/14 14:26:08][INFO][validateString]  JSON not in correct format..
+[2019/04/14 14:26:08][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:08][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:08][INFO][validateString]  some_invalid_string_to_break_json{"input":"veMuCKYQwsEDYRnypcSQRUMQmUWIktfZGQTUONRrBdfOrp diFtebyxBwyHJDbsvoTrBRXoNzhIZQmBgSjDMkqbvRTdAzAUTHXeCN LMbudxHkMIkiiBeGoWUDFMPwuMyTYYsbkAGotw TfWCesqkWfMSJiTRsKxmyNkfgAfoDiOarmVRFPDvAVuXkPMnvqkdTNgyDtkvd CCvjxfYooiteNyfcbm fOyYuH X","len":7}
+[2019/04/14 14:26:08][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:08][WARNING][validateString]  Unable to parse JSON.
+[2019/04/14 14:26:08][INFO][validateString]  JSON not in correct format..
+[2019/04/14 14:26:08][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:08][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:08][INFO][validateString]  {"input":"lThMPjE yasArCKqQCqrMYFscIesQSlIwdbZOiCDcKicL n X g","len":-1}
+[2019/04/14 14:26:08][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:08][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:08][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:08][INFO][validateString]  Entered length is negative.
+[2019/04/14 14:26:08][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:08][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:08][INFO][validateString]  {"input":"","len":387}
+[2019/04/14 14:26:08][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:08][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:08][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:08][INFO][validateString]  Sentence is empty.
+[2019/04/14 14:26:08][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:08][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:08][INFO][validateString]  {"input":"ahKPlVphqDYnCPgZsAjEYWbDrKRIXwgbpcYgDfQlEgvHqhaItmCeDejEdxgCxxRFFnwXAVGAbyCQZAoAtpbCITPFqEqiTsuWwEkFRFYuODGyVAzVtZIcJGDulQYVBgEXhkewIGCerFoGHgUipStXmAPZeVYMXQqudXszmGYiDRnIlypBoNGByYJsJkIbvyzQMLyYJEhsHnvXNTaAaqTdYOblqFRAYqFVTdoPMyqFfWiafbjVOducxaPjHSBnEiqmOICPbEaWjFcjahVDlfKjIqcVfQMVWIKThyCfFjKLcLwwmqOnPdPopGszFpyuBhNgiQrywaFiQKzeFbchannYYMIIHEyurZymUtPHHGhSIaAmIARuLpdyZVxNtzrfkhddbJRSdylXvGzXhcnCZLCQmMmJPqpAiJLOukYGXPTNVZHlXeuISgYKkapMdkYYgaZkYlijIhaQdBPCboowRfHBAyHZEDfUJdFFKTjBqra YnOLviuIexueUdlPNigX cTsByjfQoJBggeTQWPolFqNAtVnOuCuOJCchABwMXBhWAwEGSEblqjkSzfjUNNnNZQFik Da tcsvzqUu okASetMK","len":6}
+[2019/04/14 14:26:08][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:08][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:08][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:08][INFO][validateString]  Input string is over 512 chars.
+[2019/04/14 14:26:08][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:08][INFO][helloWorld]  Hello!
+[2019/04/14 14:26:08][INFO][getNumRequest]  Received request for number of records.
+[2019/04/14 14:26:08][INFO][getNumRequest]  Retrieving sentences...
+[2019/04/14 14:26:08][INFO][getAllSentencesFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cs122b_db143.valid_strings
+[2019/04/14 14:26:08][INFO][getAllSentencesFromDB]  Query Success. 
+[2019/04/14 14:26:08][INFO][addToArray]  Retrieved sentence ID: 1; Sentence: Lorem ipsum dapibus purus a suscipit elit risus ac cras orci ad.; Length: 12
+[2019/04/14 14:26:08][INFO][addToArray]  Retrieved sentence ID: 2; Sentence: Etiam vulputate lobortis ultricies gravida fusce.; Length: 6
+[2019/04/14 14:26:08][INFO][addToArray]  Retrieved sentence ID: 3; Sentence: Taciti vulputate magna ornare macenas dui, donec morbi suspendisse turpis urna, turpis in tempor por.; Length: 15
+[2019/04/14 14:26:08][INFO][addToArray]  Retrieved sentence ID: 4; Sentence: obWryqqJIElQFySAzWRgFvGzYxMTuNRaXFUkNPjHIovAiNilVZoizXjoTWUoyBjHrWVALTFEKaPqsPGjSqAoTjHCZqHeWl qvsFSvacRjbdqPmrEvkDLwjaVvpNnyXmTJminVu qEBhYUYXphUATTTSaTKsfCgidtqPzOLiCRPoibsqGwxVrXFvqnxtyteN B GGgqE; Length: 5
+[2019/04/14 14:26:08][INFO][addToArray]  Retrieved sentence ID: 5; Sentence: WyALKnhOQYAKMAuZFIKoJFmLzIEgRBMelISQgDMayWrUYkJFsiKRSwvCBnpRtKGaYTBH f kEoCflWMWLPPTUaUrWxIUyhepCkZfztWmWkEsGHk WVsSkxOHwfUfthE; Length: 4
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Creating model...
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Sentence list is not empty...
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Adding sentence #1 to array.
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Adding sentence #2 to array.
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Adding sentence #3 to array.
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Adding sentence #4 to array.
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Adding sentence #5 to array.
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Finished building model. Sentences array contains: 
+[2019/04/14 14:26:08][INFO][buildModelFromList]  	ID: 1; Sentence: Lorem ipsum dapibus purus a suscipit elit risus ac cras orci ad.; Length: 12
+[2019/04/14 14:26:08][INFO][buildModelFromList]  	ID: 2; Sentence: Etiam vulputate lobortis ultricies gravida fusce.; Length: 6
+[2019/04/14 14:26:08][INFO][buildModelFromList]  	ID: 3; Sentence: Taciti vulputate magna ornare macenas dui, donec morbi suspendisse turpis urna, turpis in tempor por.; Length: 15
+[2019/04/14 14:26:08][INFO][buildModelFromList]  	ID: 4; Sentence: obWryqqJIElQFySAzWRgFvGzYxMTuNRaXFUkNPjHIovAiNilVZoizXjoTWUoyBjHrWVALTFEKaPqsPGjSqAoTjHCZqHeWl qvsFSvacRjbdqPmrEvkDLwjaVvpNnyXmTJminVu qEBhYUYXphUATTTSaTKsfCgidtqPzOLiCRPoibsqGwxVrXFvqnxtyteN B GGgqE; Length: 5
+[2019/04/14 14:26:08][INFO][buildModelFromList]  	ID: 5; Sentence: WyALKnhOQYAKMAuZFIKoJFmLzIEgRBMelISQgDMayWrUYkJFsiKRSwvCBnpRtKGaYTBH f kEoCflWMWLPPTUaUrWxIUyhepCkZfztWmWkEsGHk WVsSkxOHwfUfthE; Length: 4
+[2019/04/14 14:26:08][INFO][getNumRequest]  Sentences retrieved.
+[2019/04/14 14:26:08][INFO][isValid]  sentences == null? false
+[2019/04/14 14:26:08][INFO][isValid]  sentences.length > 0? true
+[2019/04/14 14:26:08][INFO][getNumRequest]  Creating new num response model.
+[2019/04/14 14:26:08][INFO][getNumRequest]  ResponseModel data is valid.
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Received request for sentence with id#3
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Retrieving sentences...
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Finding sentence from given id...
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cs122b_db143.valid_strings WHERE id = 3;
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Query succeeded
+[2019/04/14 14:26:08][INFO][addToArray]  Retrieved sentence ID: 3; Sentence: Taciti vulputate magna ornare macenas dui, donec morbi suspendisse turpis urna, turpis in tempor por.; Length: 15
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Creating model...
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Sentence list is not empty...
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Adding sentence #3 to array.
+[2019/04/14 14:26:08][INFO][buildModelFromList]  Finished building model. Sentences array contains: 
+[2019/04/14 14:26:08][INFO][buildModelFromList]  	ID: 3; Sentence: Taciti vulputate magna ornare macenas dui, donec morbi suspendisse turpis urna, turpis in tempor por.; Length: 15
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Sentences retrieved.
+[2019/04/14 14:26:08][INFO][isValid]  sentences == null? false
+[2019/04/14 14:26:08][INFO][isValid]  sentences.length > 0? true
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Retrieving single sentence...
+[2019/04/14 14:26:08][INFO][getSentenceFromID]  Got sentence.
+[2019/04/14 14:26:09][INFO][getSentenceFromID]  Received request for sentence with id#999
+[2019/04/14 14:26:09][INFO][getSentenceFromID]  Retrieving sentences...
+[2019/04/14 14:26:09][INFO][getSentenceFromID]  Finding sentence from given id...
+[2019/04/14 14:26:09][INFO][getSentenceFromID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cs122b_db143.valid_strings WHERE id = 999;
+[2019/04/14 14:26:09][INFO][getSentenceFromID]  Query succeeded
+[2019/04/14 14:26:09][INFO][buildModelFromList]  Creating model...
+[2019/04/14 14:26:09][INFO][buildModelFromList]  Sentence list is not empty...
+[2019/04/14 14:26:09][INFO][buildModelFromList]  Finished building model. Sentences array contains: 
+[2019/04/14 14:26:09][INFO][getSentenceFromID]  Sentences retrieved.
+[2019/04/14 14:26:09][INFO][isValid]  sentences == null? false
+[2019/04/14 14:26:09][INFO][isValid]  sentences.length > 0? false
+[2019/04/14 14:26:09][INFO][getSentenceFromID]  No sentence found at id#999
+[2019/04/14 14:26:09][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:09][INFO][validateString]  {"input":"BcUqJFXiHYvmUbYoWRDUKkWBqiGxeQvBIBNAbaIgFO pJljbELGP zvhCdkuGcMNxEUY NgkzF zL kLvK","len":6}
+
+[2019/04/14 14:26:09][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:09][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:09][INFO][validateString]  sentence length matched inputted len
+[2019/04/14 14:26:09][INFO][validateString]  Inputting into database...
+[2019/04/14 14:26:09][INFO][insertSentenceIntoDB]  Inserting sentence into database...
+[2019/04/14 14:26:09][INFO][insertSentenceIntoDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cs122b_db143.valid_strings (sentence, length) VALUES ('BcUqJFXiHYvmUbYoWRDUKkWBqiGxeQvBIBNAbaIgFO pJljbELGP zvhCdkuGcMNxEUY NgkzF zL kLvK', 6)
+[2019/04/14 14:26:09][INFO][validateString]  Sentence entered into database.
+[2019/04/14 14:26:09][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:09][INFO][validateString]  {"input":"piGflPknsmOiYXRTPCAaUTwHBwIQSxmDClxNEcXcOlylwISDJNmAXyMHHF RHaLAcccmYjYkaVnySLMZ MBACP C cxPglYdkx GdlbX","len":16}
+
+[2019/04/14 14:26:09][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:09][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:09][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:09][INFO][validateString]  Sentence length does not match inputted len.
+[2019/04/14 14:26:09][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:09][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:09][INFO][validateString]  {"invalid-input":"iugwmsOdXdPoFXrbGHSAucMVSorBmDSitxyjuzhtBbVNmGtOMYilpxQWHhBiHlqWBgExhfVokILWjCZmLFpxiafzQPGwJRqRwtxYpjkblJnEBhxSqHZKUVSxcGPxDMZPYzSyeVUXdHDJvvQRIjWyDcENBdmNADKgoYccHOeamFoxlManJgfqkBijLuLshnlysLprIkbyMRxjHClZxDfBscdSvyFvPgueMdLjgveqrNOCJtyZPyFfnaNEVudPdVrlfwBECIEhQUIAfuWjjjfHQJoNGJGrSrkQQrfMZYfFmIhWpIMYXUchROguELUZeRoTFoJwvqJObcIGICueqCFjYllpuiDMSsdJonElAiGWjvJVsjfwTkQEQxNqSszXpGjNhZAKJWJAKGdzGzKEPfcHTxclAwDzOvGpVWseGiSochLTdYakmnHqFuvhesceJHsZfzZfbbpdexmEEngpKfggggRrSQvIAofRJanKSmqznFDksMgKGpFFhjdQV U l","invalid-len":3}
+[2019/04/14 14:26:09][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:09][WARNING][validateString]  Unable to map JSON to POJO.
+[2019/04/14 14:26:09][INFO][validateString]  JSON not in correct format..
+[2019/04/14 14:26:09][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:09][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:09][INFO][validateString]  {"input":"jxCPOAXrxGtUnD ATWCunNeRjgoJFQqieyedyIkUwOaIgNFBJfMMdOHsgxvfhXF OveghBbblBOYutuODAxAgKYijtQnAZAdYTvltOuzzfg woVWOEEplBuChZyPZFJcMQmyszdNfAX B L"}
+[2019/04/14 14:26:09][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:09][WARNING][validateString]  Unable to map JSON to POJO.
+[2019/04/14 14:26:09][INFO][validateString]  JSON not in correct format..
+[2019/04/14 14:26:09][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:09][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:09][INFO][validateString]  {"len":6}
+[2019/04/14 14:26:09][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:09][WARNING][validateString]  Unable to map JSON to POJO.
+[2019/04/14 14:26:09][INFO][validateString]  JSON not in correct format..
+[2019/04/14 14:26:09][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:09][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:09][INFO][validateString]  some_invalid_string_to_break_json{"input":"DulSFddvsnZYMAVUbIkXhDkVhktfFKsQIKRFqanAVGRVHbrkOQLOqCeBOPRbhVYlbpQhBDubHiaNwXaxEXzBzpOuOkAYwBFkoMPlOsuaHuPGmUiAKItKsefCrqAdEyahfvBspHtZMLwqFMCAlyPSfsplrTdZmUNtAdKVOlppudkYtXzuEszhleECpNXvLVPcMJQNkdPwJfMUbZSHuBWfjWOyaRhg BIyvxVXGssdMrTNjuVYMRoKDxBsklysrGcltFoprwVzaCGmgbwnfRNBCvyjGtjfxXDlvNqHGbXDZcSNCTmAJdaoNWZwcbIjatGlKnBnafjakYqxSQaoYCEOsCoVucOYnp TCXOwcmWyNzOJnEbKvu BnLWuHeIcV wPKG x M","len":7}
+[2019/04/14 14:26:09][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:09][WARNING][validateString]  Unable to parse JSON.
+[2019/04/14 14:26:09][INFO][validateString]  JSON not in correct format..
+[2019/04/14 14:26:09][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:09][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:09][INFO][validateString]  {"input":"TcpRPVUgxXnLJcFujvMibkEnobiEQSiJnZXVMtVAVkfNGamWFbjjYsSXJqXuUMguCSysJZUqYkwaTasVulRwzzXpKJFhtGDvluHbRxuRetIGprBxCiOmdoDftCLucZnYykHprhlMsTYuVwfauwsprLypOWillcPTMzrMpgRuQsdrnUxNRreqWLmKFAxlNdQbLZpuEjSKbaUzwJrYksvsxfklBkCJIdnKWyqkkmJ WkGDeCIDoYLSfhtqVGmAODkaSxCoSWmwCBKoGWqifXlmjWMvoTUQANPnamVvwmrdOEwxQPhvXgucgVqWjnsAyQvWiYNcBJAKYwEnPGaQosAZaGCKbPqXswzHprXIdEtfhwnVwTEVLTVqRpqbVabyDoGDvjspEkmhDsbFtIMYCocCKufVNF qbRhBshpwBYXUvI igxbdJNIFpcZAkiE ZXYPXqfrp Uh Q","len":-1}
+[2019/04/14 14:26:09][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:09][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:09][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:09][INFO][validateString]  Entered length is negative.
+[2019/04/14 14:26:09][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:09][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:09][INFO][validateString]  {"input":"","len":289}
+[2019/04/14 14:26:09][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:09][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:09][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:09][INFO][validateString]  Sentence is empty.
+[2019/04/14 14:26:09][INFO][validateString]  Sentence was NOT entered into database.
+[2019/04/14 14:26:09][INFO][validateString]  Received request to validate sentence.
+[2019/04/14 14:26:09][INFO][validateString]  {"input":"amOXKopxcMNUDedPZVAOpMPWsYctCMNMWtwMhVEzOXwjvvwadCgtiajbbFAvGklaYthdzWuEBWqHjeovcOahbuxfoTSAJesDZRQLRZMQFmgulJiigNcwHiiFGHmapapAwMHwkYMhRfeHG bFdtbDixKbpXQomEcFKhXAAnCseMPqAwuwLmTsFtfnoMmGcuDrFqIKXcSzYzkJLxMZnrgrhAFAAdUptCaxtUaksyNCBuIywXtOLgoRPrTBurPLRXvzPGMTzZSXrKQFXQmUpxdFglvElxBKkqsoNUSikCNvnuUFeFUNpHRnhWiOPaEmPElrLlOmZYQdwmaNPqltONAIHnVPRrnYdYkuzgUnfCpDxJjKkUdPnhroQgVYMuLVfTjMWcmrCcMxgXyzYWRRotjbhaGpNrrXhNKFFrwuXvLxqnrPBfujSTynjDbAeamWlkUDYtrmgUvDTWFZcOhNzFBhPaDuoZtLchWIOGBxJdIRZXTvxoRyoLocOHrSLI ZhnHPCqitEzocXqyDLUviYCbpYuAJnZOJfqmHLrCWGCdCeWhhbrsvMWkeVVRq vPTyuvsTRFqIzCkrZqWLBxUiD H Q i","len":7}
+[2019/04/14 14:26:09][INFO][validateString]  Mapping JSON to request model
+[2019/04/14 14:26:09][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:09][INFO][isValidLength]  Validate length == number of words in sentence
+[2019/04/14 14:26:09][INFO][validateString]  Input string is over 512 chars.
+[2019/04/14 14:26:09][INFO][validateString]  Sentence was NOT entered into database.
