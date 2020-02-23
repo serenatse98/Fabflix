@@ -1,0 +1,69 @@
+package edu.uci.ics.sctse.service.api_gateway.connectionpool;
+
+import edu.uci.ics.sctse.service.api_gateway.logger.ServiceLogger;
+import org.glassfish.jersey.internal.util.ExceptionUtils;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.LinkedList;
+
+import static edu.uci.ics.sctse.service.api_gateway.GatewayService.ANSI_RED;
+import static edu.uci.ics.sctse.service.api_gateway.GatewayService.ANSI_RESET;
+
+public class ConnectionPool
+{
+    LinkedList<Connection> connections;
+    String driver;
+    String url;
+    String username;
+    String password;
+
+    public ConnectionPool(int numCons, String driver, String url, String username, String password)
+    {
+        ServiceLogger.LOGGER.config("Initializing connection pool...");
+        connections = new LinkedList<>();
+        this.driver = driver;
+        this.url = url;
+        this.username = username;
+        this.password = password;
+
+        try
+        {
+            Class.forName(driver);
+            for (int i = 0; i < numCons; ++i) {
+                ServiceLogger.LOGGER.config("Creating connection #" + (i + 1));
+                Connection con = createConnection();
+                connections.add(con);
+            }
+        }
+        catch (ClassNotFoundException e) {
+            ServiceLogger.LOGGER.severe(ANSI_RED + "Unable to load driver into memory." + ANSI_RESET);
+        }
+    }
+
+    public synchronized Connection requestCon()
+    {
+        return connections.isEmpty() ? createConnection() : connections.removeFirst();
+    }
+
+    public synchronized void releaseCon(Connection con)
+    {
+        // Adds a Connection object to the LinkedList of available Connections.
+        // This method is called when a requesting thread has finished using a connection, and returns it.
+        connections.add(con);
+    }
+
+    private Connection createConnection()
+    {
+        Connection con = null;
+        try {
+            con = DriverManager.getConnection(url, username, password);
+        } catch (SQLException e) {
+            ServiceLogger.LOGGER.severe("Unable to create connection to database!");
+            ServiceLogger.LOGGER.severe(ANSI_RED + ExceptionUtils.exceptionStackTraceAsString(e) + ANSI_RESET);
+        }
+        return con;
+    }
+
+}

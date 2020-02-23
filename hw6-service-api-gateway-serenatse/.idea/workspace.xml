@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ebcd306d-e058-4a68-abf3-b14b33ec3364" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/apigateway_conf.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/apigateway_conf.yaml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/classes/" />
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="edu.uci.ics.sctse.service.api_gateway" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/resources/MovieEndpoints.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="68" column="57" selection-start-line="68" selection-start-column="57" selection-end-line="68" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apigateway_conf.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/resources/BillingEndpoints.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4005">
+              <caret line="293" column="8" selection-start-line="293" selection-start-column="8" selection-end-line="301" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/resources/IDMEndpoints.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3750">
+              <caret line="271" column="59" selection-start-line="271" selection-start-column="59" selection-end-line="271" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/threadpool/Worker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1470">
+              <caret line="108" column="17" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/database/ResponseDatabase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1695">
+              <caret line="123" column="52" selection-start-line="123" selection-start-column="52" selection-end-line="123" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4495#4496#0" expanded="true" />
+                <element signature="e#4521#4522#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>create</find>
+      <find>conpool</find>
+      <find>threadPool</find>
+      <find>setEma</find>
+      <find>getEmail</find>
+      <find>creditcard/i</find>
+      <find>cart/retrieve</find>
+      <find>inser</find>
+      <find>generateT</find>
+      <find>cart/in</find>
+      <find>Veri</find>
+      <find>VerifySes</find>
+      <find>VerifySess</find>
+      <find>cart/ret</find>
+      <find>getSes</find>
+      <find>retrieveca</find>
+      <find>get/</find>
+      <find>{movi</find>
+      <find>cart/re</find>
+      <find>order</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/utilities/ModelValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/RequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/utilities/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/utilities/ResourceManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/GatewayService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/threadpool/ThreadPool.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/idm/GeneralResponseModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/idm/LoginUserRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/utilities/CreateClientRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/idm/LoginUserResponseModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/idm/SessionRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CartInsertRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CartUpdateRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CartDeleteRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CartRetrieveRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CartClearRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CreditcardInsertRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CreditcardUpdateRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CreditcardDeleteRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CreditcardRetrieveRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CustomerInsertRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CustomerUpdateRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CustomerRetrieveRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/OrderPlaceRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/OrderRetrieveRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/utilities/movie_models/GenreModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/movies/MovieAddRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/movies/GenreAddRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/movies/StarAddRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/movies/StarsInRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/movies/RatingRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/movies/SearchMovieRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/threadpool/ClientRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/movies/StarSearchRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/GeneralResponseModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/VerifyEmailResponseModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/utilities/ResultCodes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/utilities/HTTPStatusCodes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/VerifySessionRequestModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/movies/ReportResponseModel.java" />
+        <option value="$PROJECT_DIR$/apigateway_conf.yaml" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/threadpool/ClientRequestQueue.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/utilities/Validate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/VerifySessionResponseModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/connectionpool/ConnectionPool.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/database/ResponseDatabase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/resources/IDMEndpoints.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/resources/Report.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/resources/BillingEndpoints.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/threadpool/Worker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/resources/MovieEndpoints.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/gradle.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_annotations_2_9_8.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_dataformat_jackson_dataformat_yaml_2_9_8.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_jaxrs_jackson_jaxrs_base_2_9_8.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_jaxrs_jackson_jaxrs_json_provider_2_9_8.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_9_8.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_3_0_2.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_errorprone_error_prone_annotations_2_2_0.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_failureaccess_1_0_1.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_27_0_1_jre.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_j2objc_j2objc_annotations_1_1.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_protobuf_protobuf_java_3_6_1.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__commons_codec_commons_codec_1_12.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__jakarta_annotation_jakarta_annotation_api_1_3_4.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__jakarta_ws_rs_jakarta_ws_rs_api_2_1_5.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__javax_validation_validation_api_2_0_1_Final.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__javax_ws_rs_javax_ws_rs_api_2_1_1.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__mysql_mysql_connector_java_8_0_15.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_checkerframework_checker_qual_2_5_2.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_mojo_animal_sniffer_annotations_1_17.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_grizzly_grizzly_framework_2_4_4.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_grizzly_grizzly_http_2_4_4.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_grizzly_grizzly_http_server_2_4_4.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_grizzly_grizzly_http_servlet_2_4_4.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_hk2_external_aopalliance_repackaged_2_5_0.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_hk2_external_jakarta_inject_2_5_0.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_hk2_hk2_api_2_5_0.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_hk2_hk2_locator_2_5_0.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_hk2_hk2_utils_2_5_0.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_hk2_osgi_resource_locator_1_0_1.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_jersey_containers_jersey_container_grizzly2_http_2_28.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_jersey_core_jersey_client_2_28.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_jersey_core_jersey_common_2_28.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_jersey_core_jersey_server_2_28.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_jersey_ext_jersey_entity_filtering_2_28.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_jersey_inject_jersey_hk2_2_28.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_jersey_media_jersey_media_jaxb_2_28.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_jersey_media_jersey_media_json_jackson_2_28.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_jersey_project_pom_2_28.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_javassist_javassist_3_22_0_CR2.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_yaml_snakeyaml_1_23.xml" />
+        <option value="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="361" />
+    <option name="y" value="23" />
+    <option name="width" value="1080" />
+    <option name="height" value="615" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="edu.uci.ics.sctse.service.api_gateway" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hw6-service-api-gateway-serenatse" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="edu.uci.ics.sctse.service.api_gateway" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hw6-service-api-gateway-serenatse" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="edu.uci.ics.sctse.service.api_gateway" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hw6-service-api-gateway-serenatse" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="edu.uci.ics.sctse.service.api_gateway" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hw6-service-api-gateway-serenatse" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.other" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edu.uci.ics.sctse.service.api_gateway.utilities.movie_models" />
+      <recent name="edu.uci.ics.sctse.service.api_gateway.exceptions" />
+      <recent name="edu.uci.ics.sctse.service.api_gateway.models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway" />
+      <recent name="$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ebcd306d-e058-4a68-abf3-b14b33ec3364" name="Default Changelist" comment="" />
+      <created>1558054033150</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1558054033150</updated>
+      <workItem from="1558054036053" duration="263000" />
+      <workItem from="1558054318627" duration="80639000" />
+      <workItem from="1558587558063" duration="96379000" />
+      <workItem from="1559869746935" duration="696000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="177977000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="361" y="23" width="1080" height="615" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49879518" visible="true" weight="0.15510598" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.50120485" side_tool="true" weight="0.115" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32828283" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49916667" weight="0.32803467" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.6959847" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50083333" side_tool="true" weight="0.32803467" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32924962" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Gradle" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="10" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/idm/PrivilegeRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CartInsertRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="45" column="1" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="45" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CartUpdateRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="38" column="5" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CartDeleteRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#816#817#0" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CartRetrieveRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="27" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#673#674#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CartClearRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#606#607#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CreditcardUpdateRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CreditcardDeleteRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CreditcardRetrieveRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CustomerInsertRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="59" column="1" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="59" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CustomerUpdateRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="34" column="5" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CustomerRetrieveRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/OrderPlaceRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/utilities/movie_models/GenreModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/movies/StarsInRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/movies/MovieAddRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-387">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2213#2214#0" expanded="true" />
+            <element signature="e#2244#2245#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/movies/SearchMovieRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2115#2116#0" expanded="true" />
+            <element signature="e#2147#2148#0" expanded="true" />
+            <element signature="e#2190#2191#0" expanded="true" />
+            <element signature="e#2220#2221#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/movies/RatingRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/movies/StarSearchRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1777#1778#0" expanded="true" />
+            <element signature="e#1809#1810#0" expanded="true" />
+            <element signature="e#1783#1784#0" expanded="true" />
+            <element signature="e#1815#1816#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/utilities/ModelValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/utilities/weqweqwe.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/RequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/utilities/HTTPStatusCodes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/movies/ReportResponseModel.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/NoContentResponseModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/GeneralResponseModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/CreditcardInsertRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/GatewayService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="171" column="64" selection-start-line="171" selection-start-column="51" selection-end-line="171" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/threadpool/ThreadPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#1021#1022#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/threadpool/ListNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/idm/SessionRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#671#672#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#934#935#0" expanded="true" />
+            <element signature="e#966#967#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/threadpool/ClientRequestQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1608#1609#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/VerifySessionRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#793#794#0" expanded="true" />
+            <element signature="e#863#864#0" expanded="true" />
+            <element signature="e#1033#1034#0" expanded="true" />
+            <element signature="e#1061#1062#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/VerifyEmailResponseModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/idm/LoginUserResponseModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/movies/StarAddRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/movies/GenreAddRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/VerifySessionResponseModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/threadpool/ClientRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="112" column="5" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2274#2275#0" expanded="true" />
+            <element signature="e#2328#2329#0" expanded="true" />
+            <element signature="e#2370#2371#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/utilities/Validate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/utilities/ResultCodes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/connectionpool/ConnectionPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.grizzly/grizzly-http-server/2.4.4/289ed9b73dbc3bb09a3a18ce5a9c99e340676d71/grizzly-http-server-2.4.4-sources.jar!/org/glassfish/grizzly/http/server/HttpHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="207" column="39" lean-forward="true" selection-start-line="207" selection-start-column="39" selection-end-line="207" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/models/billing/OrderRetrieveRequestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/resources/Report.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="55" column="11" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/resources/MovieEndpoints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="68" column="57" selection-start-line="68" selection-start-column="57" selection-end-line="68" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/resources/BillingEndpoints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4005">
+          <caret line="293" column="8" selection-start-line="293" selection-start-column="8" selection-end-line="301" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/resources/IDMEndpoints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3750">
+          <caret line="271" column="59" selection-start-line="271" selection-start-column="59" selection-end-line="271" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/threadpool/Worker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="108" column="17" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uci/ics/sctse/service/api_gateway/database/ResponseDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1695">
+          <caret line="123" column="52" selection-start-line="123" selection-start-column="52" selection-end-line="123" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4495#4496#0" expanded="true" />
+            <element signature="e#4521#4522#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apigateway_conf.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
