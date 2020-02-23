@@ -1,0 +1,65 @@
+USE cs122b_db143;
+
+DROP TABLE IF EXISTS privilege_levels;
+CREATE TABLE IF NOT EXISTS privilege_levels
+(
+	plevel 		INT 			PRIMARY KEY NOT NULL,
+	pname 		VARCHAR(20) 	NOT NULL
+);
+
+DROP TABLE IF EXISTS session_status;
+CREATE TABLE IF NOT EXISTS session_status
+(
+	statusid 	INT 			PRIMARY KEY NOT NULL,
+	status 		VARCHAR(20)		NOT NULL
+);
+
+DROP TABLE IF EXISTS user_status;
+CREATE TABLE IF NOT EXISTS user_status
+(
+	statusid 	INT 			PRIMARY KEY NOT NULL,
+	status 		VARCHAR(20) 	NOT NULL
+);
+
+DROP TABLE IF EXISTS users;
+CREATE TABLE IF NOT EXISTS users
+(
+    id          INT 			PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    email		VARCHAR(50) 	NOT NULL UNIQUE,
+    status 		INT 			NOT NULL,
+    plevel 		INT 			NOT NULL, 
+    salt 		VARCHAR(8) 		NOT NULL,
+    pword 		VARCHAR(128)	NOT NULL,
+
+    FOREIGN KEY (plevel) 
+    	REFERENCES privilege_levels (plevel)
+    	ON UPDATE CASCADE
+    	ON DELETE CASCADE,
+    FOREIGN KEY (status) 
+    	REFERENCES user_status (statusid)
+    	ON UPDATE CASCADE
+    	ON DELETE CASCADE
+);
+
+DROP TABLE IF EXISTS sessions;
+CREATE TABLE IF NOT EXISTS sessions
+(
+	sessionID	VARCHAR(128)	PRIMARY KEY NOT NULL,
+	email 		VARCHAR(50) 	NOT NULL,
+	status 		INT 			NOT NULL,
+	timeCreated TIMESTAMP 		DEFAULT CURRENT_TIMESTAMP NOT NULL,
+	lastUsed 	TIMESTAMP 		DEFAULT CURRENT_TIMESTAMP NOT NULL,
+	exprTime 	TIMESTAMP 		DEFAULT CURRENT_TIMESTAMP NOT NULL,
+
+	FOREIGN KEY (status) 
+		REFERENCES session_status (statusid)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE,
+	FOREIGN KEY (email) 
+		REFERENCES users (email)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
+);
+
+
+

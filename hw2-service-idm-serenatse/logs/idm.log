@@ -1,0 +1,1545 @@
+[2019/06/06 22:33:04][CONFIG][initLogger]  Logging initialized.
+[2019/06/06 22:33:04][CONFIG][initService]  Starting service...
+[2019/06/06 22:33:04][CONFIG][currentConfigs]  Scheme: http://
+[2019/06/06 22:33:04][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2019/06/06 22:33:04][CONFIG][currentConfigs]  Port: 7177
+[2019/06/06 22:33:04][CONFIG][currentConfigs]  Path: /api/idm
+[2019/06/06 22:33:04][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2019/06/06 22:33:04][CONFIG][currentConfigs]  Logger output file: idm.log
+[2019/06/06 22:33:04][CONFIG][currentConfigs]  Database hostname: localhost
+[2019/06/06 22:33:04][CONFIG][currentConfigs]  Database port: 3307
+[2019/06/06 22:33:04][CONFIG][currentConfigs]  Database username: cs122b_db143
+[2019/06/06 22:33:04][CONFIG][currentConfigs]  Database password provided? true
+[2019/06/06 22:33:04][CONFIG][currentConfigs]  Database name: cs122b_db143
+[2019/06/06 22:33:04][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[2019/06/06 22:33:04][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/06 22:33:04][CONFIG][currentConfigs]  Session timeout: 6000000
+[2019/06/06 22:33:04][CONFIG][currentConfigs]  Session expiration: 6000000
+[2019/06/06 22:33:04][CONFIG][connectToDatabase]  Connecting to database...
+[2019/06/06 22:33:05][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://localhost:3307/cs122b_db143?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/06 22:33:05][CONFIG][connectToDatabase]  Connected to database: jdbc:mysql://localhost:3307/cs122b_db143?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/06 22:33:05][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2019/06/06 22:33:05][CONFIG][initHTTPServer]  Building URI from configs...
+[2019/06/06 22:33:05][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:7177/api/idm
+[2019/06/06 22:33:05][CONFIG][initHTTPServer]  Set Jersey resources.
+[2019/06/06 22:33:05][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2019/06/06 22:33:05][CONFIG][initHTTPServer]  Starting HTTP server...
+[2019/06/06 22:33:06][CONFIG][initHTTPServer]  HTTP server started.
+[2019/06/06 22:33:06][CONFIG][initService]  Service initialized.
+[2019/06/06 22:48:38][INFO][loginUser]  Received request to login user
+[2019/06/06 22:48:38][INFO][loginUser]  Request:
+{"email":"aaa@aaa.aaa","password":"qweQWE123!"}
+[2019/06/06 22:48:38][INFO][loginUser]  Mapping JSON to request model
+[2019/06/06 22:48:38][INFO][loginUser]  Mapped to JSON
+[2019/06/06 22:48:38][INFO][loginUser]  Getting result code...
+[2019/06/06 22:48:38][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 22:48:38][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 22:48:38][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:48:38][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 22:48:38][INFO][getSalt]  Retrieving salt from database...
+[2019/06/06 22:48:38][INFO][getSalt]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:48:38][INFO][getSalt]  Query succeeded
+[2019/06/06 22:48:38][INFO][getSalt]  Getting salt from resultSet
+[2019/06/06 22:48:38][INFO][isCorrectPass]  [LoginRequestModel] SALT: fb350230
+[2019/06/06 22:48:38][INFO][unhashPassword]  Converting salt string to byte[]
+[2019/06/06 22:48:38][INFO][unhashPassword]  [HashPassModel] SALT: fb350230
+[2019/06/06 22:48:38][INFO][unhashPassword]  Salt: fb350230
+[2019/06/06 22:48:38][INFO][unhashPassword]  Unhashing password...
+[2019/06/06 22:48:38][INFO][unhashPassword]  Unhashed password.
+[2019/06/06 22:48:38][INFO][isCorrectPass]  Checking entered password
+[2019/06/06 22:48:38][INFO][getHashPass]  Retrieving hashed password from database...
+[2019/06/06 22:48:38][INFO][getHashPass]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT pword FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:48:38][INFO][getHashPass]  Query succeeded
+[2019/06/06 22:48:38][INFO][getHashPass]  Getting password from resultSet
+[2019/06/06 22:48:38][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:48:38][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 22:48:38][INFO][loginUser]  Result code: 120
+[2019/06/06 22:48:38][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: null
+}
+[2019/06/06 22:48:38][INFO][loginUser]  Login ok - creating session...
+[2019/06/06 22:48:38][INFO][loginUser]  SESSION ID: 402a5c84fe2134e2f8d84bae42015938f7da4198ab70c29542ac45a6dfc3c3d120b72555f6cb214e823e382e89181076337afef0442c55c857239b717dc9ae44
+[2019/06/06 22:48:38][INFO][loginUser]  Checking for existing/active sessions...
+[2019/06/06 22:48:38][INFO][getSessionID]  Getting sessionID for aaa@aaa.aaa
+[2019/06/06 22:48:38][INFO][getSessionID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:48:38][INFO][getSessionID]  Query succeeded
+[2019/06/06 22:48:38][INFO][isEmailInDB]  Checking if user is already in DB
+[2019/06/06 22:48:38][INFO][isEmailInDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:48:38][INFO][isEmailInDB]  Query Success. 
+[2019/06/06 22:48:38][INFO][isSessionActive]  Checking if user has active session...
+[2019/06/06 22:48:38][INFO][isSessionActive]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cs122b_db143.sessions WHERE sessionID = '079aa67d8add547faab095851f054c1181c82f9c5087ad20beee44163e88d471a80208a2e829c4090ab35dca4814503ff929e49d1a831ea962774e90a22dc1d0' AND email = 'aaa@aaa.aaa' AND status = 1
+[2019/06/06 22:48:39][INFO][isSessionActive]  Query Success.
+[2019/06/06 22:48:39][INFO][loginUser]  Creating new session...
+[2019/06/06 22:48:39][INFO][insertSessionIntoDB]  Inserting user into database...
+[2019/06/06 22:48:39][INFO][insertSessionIntoDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cs122b_db143.sessions (sessionID, email, status, timeCreated, lastUsed, exprTime) VALUES ('402a5c84fe2134e2f8d84bae42015938f7da4198ab70c29542ac45a6dfc3c3d120b72555f6cb214e823e382e89181076337afef0442c55c857239b717dc9ae44', 'aaa@aaa.aaa', 1, '2019-06-06 22:48:38.911', '2019-06-06 22:48:38.911', '2019-06-07 00:28:38.911')
+[2019/06/06 22:48:39][INFO][insertSessionIntoDB]  Query succeeded
+[2019/06/06 22:48:39][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: 402a5c84fe2134e2f8d84bae42015938f7da4198ab70c29542ac45a6dfc3c3d120b72555f6cb214e823e382e89181076337afef0442c55c857239b717dc9ae44
+}
+[2019/06/06 22:48:42][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 22:48:42][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":3}
+[2019/06/06 22:48:42][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 22:48:42][INFO][userPrivilege]  Getting result code...
+[2019/06/06 22:48:42][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 22:48:42][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 22:48:42][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:48:42][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 22:48:42][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:48:42][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:48:42][INFO][getPriv]  Query succeeded
+[2019/06/06 22:48:42][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:48:42][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:48:42][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:48:42][INFO][getPriv]  Query succeeded
+[2019/06/06 22:48:42][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:48:42][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 22:48:42][INFO][userPrivilege]  Result code: 141
+[2019/06/06 22:48:42][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 22:48:42][INFO][userPrivilege]  Response: ok
+[2019/06/06 22:48:45][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 22:48:45][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":4}
+[2019/06/06 22:48:45][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 22:48:45][INFO][userPrivilege]  Getting result code...
+[2019/06/06 22:48:45][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 22:48:45][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 22:48:45][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:48:45][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 22:48:45][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:48:45][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:48:45][INFO][getPriv]  Query succeeded
+[2019/06/06 22:48:45][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:48:45][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:48:45][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:48:45][INFO][getPriv]  Query succeeded
+[2019/06/06 22:48:45][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:48:45][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 22:48:45][INFO][userPrivilege]  Result code: 141
+[2019/06/06 22:48:45][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 22:48:45][INFO][userPrivilege]  Response: ok
+[2019/06/06 22:49:42][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 22:49:42][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":3}
+[2019/06/06 22:49:42][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 22:49:42][INFO][userPrivilege]  Getting result code...
+[2019/06/06 22:49:42][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 22:49:42][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 22:49:42][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:49:42][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 22:49:42][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:49:42][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:49:42][INFO][getPriv]  Query succeeded
+[2019/06/06 22:49:42][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:49:42][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:49:42][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:49:42][INFO][getPriv]  Query succeeded
+[2019/06/06 22:49:42][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:49:42][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 22:49:42][INFO][userPrivilege]  Result code: 141
+[2019/06/06 22:49:42][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 22:49:42][INFO][userPrivilege]  Response: ok
+[2019/06/06 22:49:45][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 22:49:45][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":4}
+[2019/06/06 22:49:45][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 22:49:45][INFO][userPrivilege]  Getting result code...
+[2019/06/06 22:49:45][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 22:49:45][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 22:49:45][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:49:45][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 22:49:45][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:49:45][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:49:45][INFO][getPriv]  Query succeeded
+[2019/06/06 22:49:45][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:49:45][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:49:45][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:49:45][INFO][getPriv]  Query succeeded
+[2019/06/06 22:49:45][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:49:45][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 22:49:45][INFO][userPrivilege]  Result code: 141
+[2019/06/06 22:49:45][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 22:49:45][INFO][userPrivilege]  Response: ok
+[2019/06/06 22:49:51][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 22:49:51][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":3}
+[2019/06/06 22:49:51][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 22:49:51][INFO][userPrivilege]  Getting result code...
+[2019/06/06 22:49:51][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 22:49:51][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 22:49:51][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:49:51][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 22:49:51][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:49:51][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:49:51][INFO][getPriv]  Query succeeded
+[2019/06/06 22:49:51][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:49:51][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:49:51][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:49:51][INFO][getPriv]  Query succeeded
+[2019/06/06 22:49:51][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:49:51][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 22:49:51][INFO][userPrivilege]  Result code: 141
+[2019/06/06 22:49:51][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 22:49:51][INFO][userPrivilege]  Response: ok
+[2019/06/06 22:50:07][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 22:50:07][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":4}
+[2019/06/06 22:50:07][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 22:50:07][INFO][userPrivilege]  Getting result code...
+[2019/06/06 22:50:07][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 22:50:07][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 22:50:07][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:50:07][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 22:50:07][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:50:07][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:50:07][INFO][getPriv]  Query succeeded
+[2019/06/06 22:50:07][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:50:07][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:50:07][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:50:07][INFO][getPriv]  Query succeeded
+[2019/06/06 22:50:07][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:50:07][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 22:50:07][INFO][userPrivilege]  Result code: 141
+[2019/06/06 22:50:07][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 22:50:07][INFO][userPrivilege]  Response: ok
+[2019/06/06 22:52:23][INFO][loginUser]  Received request to login user
+[2019/06/06 22:52:23][INFO][loginUser]  Request:
+{"email":"aaa@aaa.aaa","password":"qweQWE123!"}
+[2019/06/06 22:52:23][INFO][loginUser]  Mapping JSON to request model
+[2019/06/06 22:52:23][INFO][loginUser]  Mapped to JSON
+[2019/06/06 22:52:23][INFO][loginUser]  Getting result code...
+[2019/06/06 22:52:23][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 22:52:23][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 22:52:23][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:52:23][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 22:52:23][INFO][getSalt]  Retrieving salt from database...
+[2019/06/06 22:52:23][INFO][getSalt]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:52:23][INFO][getSalt]  Query succeeded
+[2019/06/06 22:52:23][INFO][getSalt]  Getting salt from resultSet
+[2019/06/06 22:52:23][INFO][isCorrectPass]  [LoginRequestModel] SALT: fb350230
+[2019/06/06 22:52:23][INFO][unhashPassword]  Converting salt string to byte[]
+[2019/06/06 22:52:23][INFO][unhashPassword]  [HashPassModel] SALT: fb350230
+[2019/06/06 22:52:23][INFO][unhashPassword]  Salt: fb350230
+[2019/06/06 22:52:23][INFO][unhashPassword]  Unhashing password...
+[2019/06/06 22:52:23][INFO][unhashPassword]  Unhashed password.
+[2019/06/06 22:52:23][INFO][isCorrectPass]  Checking entered password
+[2019/06/06 22:52:23][INFO][getHashPass]  Retrieving hashed password from database...
+[2019/06/06 22:52:23][INFO][getHashPass]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT pword FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:52:23][INFO][getHashPass]  Query succeeded
+[2019/06/06 22:52:23][INFO][getHashPass]  Getting password from resultSet
+[2019/06/06 22:52:23][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:52:23][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 22:52:23][INFO][loginUser]  Result code: 120
+[2019/06/06 22:52:23][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: null
+}
+[2019/06/06 22:52:23][INFO][loginUser]  Login ok - creating session...
+[2019/06/06 22:52:23][INFO][loginUser]  SESSION ID: 6afd59ccbe5c504a608bd0b752d12c3a169aefcee8a86b3bfe8b89e84aa4e15d6a36048c73ecdd51c9be206fbb95311937a12e411607aeb4e8446b0fca3c3868
+[2019/06/06 22:52:23][INFO][loginUser]  Checking for existing/active sessions...
+[2019/06/06 22:52:23][INFO][getSessionID]  Getting sessionID for aaa@aaa.aaa
+[2019/06/06 22:52:23][INFO][getSessionID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:52:23][INFO][getSessionID]  Query succeeded
+[2019/06/06 22:52:23][INFO][isEmailInDB]  Checking if user is already in DB
+[2019/06/06 22:52:23][INFO][isEmailInDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:52:23][INFO][isEmailInDB]  Query Success. 
+[2019/06/06 22:52:23][INFO][isSessionActive]  Checking if user has active session...
+[2019/06/06 22:52:23][INFO][isSessionActive]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cs122b_db143.sessions WHERE sessionID = '079aa67d8add547faab095851f054c1181c82f9c5087ad20beee44163e88d471a80208a2e829c4090ab35dca4814503ff929e49d1a831ea962774e90a22dc1d0' AND email = 'aaa@aaa.aaa' AND status = 1
+[2019/06/06 22:52:23][INFO][isSessionActive]  Query Success.
+[2019/06/06 22:52:23][INFO][loginUser]  Creating new session...
+[2019/06/06 22:52:23][INFO][insertSessionIntoDB]  Inserting user into database...
+[2019/06/06 22:52:23][INFO][insertSessionIntoDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cs122b_db143.sessions (sessionID, email, status, timeCreated, lastUsed, exprTime) VALUES ('6afd59ccbe5c504a608bd0b752d12c3a169aefcee8a86b3bfe8b89e84aa4e15d6a36048c73ecdd51c9be206fbb95311937a12e411607aeb4e8446b0fca3c3868', 'aaa@aaa.aaa', 1, '2019-06-06 22:52:23.729', '2019-06-06 22:52:23.729', '2019-06-07 00:32:23.729')
+[2019/06/06 22:52:23][INFO][insertSessionIntoDB]  Query succeeded
+[2019/06/06 22:52:23][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: 6afd59ccbe5c504a608bd0b752d12c3a169aefcee8a86b3bfe8b89e84aa4e15d6a36048c73ecdd51c9be206fbb95311937a12e411607aeb4e8446b0fca3c3868
+}
+[2019/06/06 22:52:27][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 22:52:27][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":3}
+[2019/06/06 22:52:27][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 22:52:27][INFO][userPrivilege]  Getting result code...
+[2019/06/06 22:52:27][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 22:52:27][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 22:52:27][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:52:27][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 22:52:27][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:52:27][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:52:27][INFO][getPriv]  Query succeeded
+[2019/06/06 22:52:27][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:52:27][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:52:27][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:52:27][INFO][getPriv]  Query succeeded
+[2019/06/06 22:52:27][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:52:27][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 22:52:27][INFO][userPrivilege]  Result code: 141
+[2019/06/06 22:52:27][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 22:52:27][INFO][userPrivilege]  Response: ok
+[2019/06/06 22:52:29][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 22:52:29][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":4}
+[2019/06/06 22:52:29][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 22:52:29][INFO][userPrivilege]  Getting result code...
+[2019/06/06 22:52:29][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 22:52:29][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 22:52:29][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:52:29][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 22:52:29][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:52:29][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:52:29][INFO][getPriv]  Query succeeded
+[2019/06/06 22:52:29][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:52:29][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:52:29][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:52:29][INFO][getPriv]  Query succeeded
+[2019/06/06 22:52:29][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:52:29][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 22:52:29][INFO][userPrivilege]  Result code: 141
+[2019/06/06 22:52:29][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 22:52:29][INFO][userPrivilege]  Response: ok
+[2019/06/06 22:53:58][INFO][loginUser]  Received request to login user
+[2019/06/06 22:53:58][INFO][loginUser]  Request:
+{"email":"aaa@aaa.aaa","password":"qweQWE123!"}
+[2019/06/06 22:53:58][INFO][loginUser]  Mapping JSON to request model
+[2019/06/06 22:53:58][INFO][loginUser]  Mapped to JSON
+[2019/06/06 22:53:58][INFO][loginUser]  Getting result code...
+[2019/06/06 22:53:58][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 22:53:58][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 22:53:58][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:53:58][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 22:53:58][INFO][getSalt]  Retrieving salt from database...
+[2019/06/06 22:53:58][INFO][getSalt]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:53:58][INFO][getSalt]  Query succeeded
+[2019/06/06 22:53:58][INFO][getSalt]  Getting salt from resultSet
+[2019/06/06 22:53:58][INFO][isCorrectPass]  [LoginRequestModel] SALT: fb350230
+[2019/06/06 22:53:58][INFO][unhashPassword]  Converting salt string to byte[]
+[2019/06/06 22:53:58][INFO][unhashPassword]  [HashPassModel] SALT: fb350230
+[2019/06/06 22:53:58][INFO][unhashPassword]  Salt: fb350230
+[2019/06/06 22:53:58][INFO][unhashPassword]  Unhashing password...
+[2019/06/06 22:53:58][INFO][unhashPassword]  Unhashed password.
+[2019/06/06 22:53:58][INFO][isCorrectPass]  Checking entered password
+[2019/06/06 22:53:58][INFO][getHashPass]  Retrieving hashed password from database...
+[2019/06/06 22:53:58][INFO][getHashPass]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT pword FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:53:58][INFO][getHashPass]  Query succeeded
+[2019/06/06 22:53:58][INFO][getHashPass]  Getting password from resultSet
+[2019/06/06 22:53:58][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:53:58][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 22:53:58][INFO][loginUser]  Result code: 120
+[2019/06/06 22:53:58][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: null
+}
+[2019/06/06 22:53:58][INFO][loginUser]  Login ok - creating session...
+[2019/06/06 22:53:58][INFO][loginUser]  SESSION ID: 71da531a5a530a84deb1f297497ab7d0d02965dd92ebb8d12640465bbce7a640d0b55c9415cd82abf952b06f030a06381493f7f465cb42768ec9f9f1c733b638
+[2019/06/06 22:53:58][INFO][loginUser]  Checking for existing/active sessions...
+[2019/06/06 22:53:58][INFO][getSessionID]  Getting sessionID for aaa@aaa.aaa
+[2019/06/06 22:53:58][INFO][getSessionID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:53:58][INFO][getSessionID]  Query succeeded
+[2019/06/06 22:53:58][INFO][isEmailInDB]  Checking if user is already in DB
+[2019/06/06 22:53:58][INFO][isEmailInDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:53:59][INFO][isEmailInDB]  Query Success. 
+[2019/06/06 22:53:59][INFO][isSessionActive]  Checking if user has active session...
+[2019/06/06 22:53:59][INFO][isSessionActive]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cs122b_db143.sessions WHERE sessionID = '079aa67d8add547faab095851f054c1181c82f9c5087ad20beee44163e88d471a80208a2e829c4090ab35dca4814503ff929e49d1a831ea962774e90a22dc1d0' AND email = 'aaa@aaa.aaa' AND status = 1
+[2019/06/06 22:53:59][INFO][isSessionActive]  Query Success.
+[2019/06/06 22:53:59][INFO][loginUser]  Creating new session...
+[2019/06/06 22:53:59][INFO][insertSessionIntoDB]  Inserting user into database...
+[2019/06/06 22:53:59][INFO][insertSessionIntoDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cs122b_db143.sessions (sessionID, email, status, timeCreated, lastUsed, exprTime) VALUES ('71da531a5a530a84deb1f297497ab7d0d02965dd92ebb8d12640465bbce7a640d0b55c9415cd82abf952b06f030a06381493f7f465cb42768ec9f9f1c733b638', 'aaa@aaa.aaa', 1, '2019-06-06 22:53:58.963', '2019-06-06 22:53:58.963', '2019-06-07 00:33:58.963')
+[2019/06/06 22:53:59][INFO][insertSessionIntoDB]  Query succeeded
+[2019/06/06 22:53:59][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: 71da531a5a530a84deb1f297497ab7d0d02965dd92ebb8d12640465bbce7a640d0b55c9415cd82abf952b06f030a06381493f7f465cb42768ec9f9f1c733b638
+}
+[2019/06/06 22:54:02][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 22:54:02][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":3}
+[2019/06/06 22:54:02][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 22:54:02][INFO][userPrivilege]  Getting result code...
+[2019/06/06 22:54:02][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 22:54:02][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 22:54:02][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:54:02][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 22:54:02][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:54:02][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:54:02][INFO][getPriv]  Query succeeded
+[2019/06/06 22:54:02][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:54:02][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:54:02][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:54:02][INFO][getPriv]  Query succeeded
+[2019/06/06 22:54:02][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:54:02][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 22:54:02][INFO][userPrivilege]  Result code: 141
+[2019/06/06 22:54:02][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 22:54:02][INFO][userPrivilege]  Response: ok
+[2019/06/06 22:54:03][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 22:54:03][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":4}
+[2019/06/06 22:54:03][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 22:54:03][INFO][userPrivilege]  Getting result code...
+[2019/06/06 22:54:03][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 22:54:03][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 22:54:03][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:54:03][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 22:54:03][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:54:03][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:54:03][INFO][getPriv]  Query succeeded
+[2019/06/06 22:54:03][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:54:03][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:54:03][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:54:03][INFO][getPriv]  Query succeeded
+[2019/06/06 22:54:03][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:54:03][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 22:54:03][INFO][userPrivilege]  Result code: 141
+[2019/06/06 22:54:03][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 22:54:03][INFO][userPrivilege]  Response: ok
+[2019/06/06 22:58:45][INFO][loginUser]  Received request to login user
+[2019/06/06 22:58:45][INFO][loginUser]  Request:
+{"email":"aaa@aaa.aaa","password":"qweQWE123!"}
+[2019/06/06 22:58:45][INFO][loginUser]  Mapping JSON to request model
+[2019/06/06 22:58:45][INFO][loginUser]  Mapped to JSON
+[2019/06/06 22:58:45][INFO][loginUser]  Getting result code...
+[2019/06/06 22:58:45][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 22:58:45][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 22:58:45][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:58:45][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 22:58:45][INFO][getSalt]  Retrieving salt from database...
+[2019/06/06 22:58:45][INFO][getSalt]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:58:45][INFO][getSalt]  Query succeeded
+[2019/06/06 22:58:45][INFO][getSalt]  Getting salt from resultSet
+[2019/06/06 22:58:45][INFO][isCorrectPass]  [LoginRequestModel] SALT: fb350230
+[2019/06/06 22:58:45][INFO][unhashPassword]  Converting salt string to byte[]
+[2019/06/06 22:58:45][INFO][unhashPassword]  [HashPassModel] SALT: fb350230
+[2019/06/06 22:58:45][INFO][unhashPassword]  Salt: fb350230
+[2019/06/06 22:58:45][INFO][unhashPassword]  Unhashing password...
+[2019/06/06 22:58:45][INFO][unhashPassword]  Unhashed password.
+[2019/06/06 22:58:45][INFO][isCorrectPass]  Checking entered password
+[2019/06/06 22:58:45][INFO][getHashPass]  Retrieving hashed password from database...
+[2019/06/06 22:58:45][INFO][getHashPass]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT pword FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:58:45][INFO][getHashPass]  Query succeeded
+[2019/06/06 22:58:45][INFO][getHashPass]  Getting password from resultSet
+[2019/06/06 22:58:45][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:58:45][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 22:58:45][INFO][loginUser]  Result code: 120
+[2019/06/06 22:58:45][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: null
+}
+[2019/06/06 22:58:45][INFO][loginUser]  Login ok - creating session...
+[2019/06/06 22:58:45][INFO][loginUser]  SESSION ID: 7de0873883d3252ae4fc152060f683e5f4238b50d47c8ce51c9dae46f2adcb5d3a7b3491a009cfcdd1835303f966803b2dcf0d2e74ae25bf295a919eedb40164
+[2019/06/06 22:58:45][INFO][loginUser]  Checking for existing/active sessions...
+[2019/06/06 22:58:45][INFO][getSessionID]  Getting sessionID for aaa@aaa.aaa
+[2019/06/06 22:58:45][INFO][getSessionID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:58:45][INFO][getSessionID]  Query succeeded
+[2019/06/06 22:58:45][INFO][isEmailInDB]  Checking if user is already in DB
+[2019/06/06 22:58:45][INFO][isEmailInDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:58:45][INFO][isEmailInDB]  Query Success. 
+[2019/06/06 22:58:45][INFO][isSessionActive]  Checking if user has active session...
+[2019/06/06 22:58:45][INFO][isSessionActive]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cs122b_db143.sessions WHERE sessionID = '079aa67d8add547faab095851f054c1181c82f9c5087ad20beee44163e88d471a80208a2e829c4090ab35dca4814503ff929e49d1a831ea962774e90a22dc1d0' AND email = 'aaa@aaa.aaa' AND status = 1
+[2019/06/06 22:58:45][INFO][isSessionActive]  Query Success.
+[2019/06/06 22:58:45][INFO][loginUser]  Creating new session...
+[2019/06/06 22:58:45][INFO][insertSessionIntoDB]  Inserting user into database...
+[2019/06/06 22:58:45][INFO][insertSessionIntoDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cs122b_db143.sessions (sessionID, email, status, timeCreated, lastUsed, exprTime) VALUES ('7de0873883d3252ae4fc152060f683e5f4238b50d47c8ce51c9dae46f2adcb5d3a7b3491a009cfcdd1835303f966803b2dcf0d2e74ae25bf295a919eedb40164', 'aaa@aaa.aaa', 1, '2019-06-06 22:58:45.851', '2019-06-06 22:58:45.851', '2019-06-07 00:38:45.851')
+[2019/06/06 22:58:45][INFO][insertSessionIntoDB]  Query succeeded
+[2019/06/06 22:58:45][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: 7de0873883d3252ae4fc152060f683e5f4238b50d47c8ce51c9dae46f2adcb5d3a7b3491a009cfcdd1835303f966803b2dcf0d2e74ae25bf295a919eedb40164
+}
+[2019/06/06 22:58:49][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 22:58:49][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":3}
+[2019/06/06 22:58:49][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 22:58:49][INFO][userPrivilege]  Getting result code...
+[2019/06/06 22:58:49][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 22:58:49][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 22:58:49][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:58:49][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 22:58:49][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:58:49][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:58:49][INFO][getPriv]  Query succeeded
+[2019/06/06 22:58:49][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:58:49][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:58:49][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:58:49][INFO][getPriv]  Query succeeded
+[2019/06/06 22:58:49][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:58:49][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 22:58:49][INFO][userPrivilege]  Result code: 141
+[2019/06/06 22:58:49][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 22:58:49][INFO][userPrivilege]  Response: ok
+[2019/06/06 22:58:55][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 22:58:55][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":4}
+[2019/06/06 22:58:55][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 22:58:55][INFO][userPrivilege]  Getting result code...
+[2019/06/06 22:58:55][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 22:58:55][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 22:58:55][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:58:55][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 22:58:55][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:58:55][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:58:55][INFO][getPriv]  Query succeeded
+[2019/06/06 22:58:55][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:58:55][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 22:58:55][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 22:58:55][INFO][getPriv]  Query succeeded
+[2019/06/06 22:58:55][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 22:58:55][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 22:58:55][INFO][userPrivilege]  Result code: 141
+[2019/06/06 22:58:55][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 22:58:55][INFO][userPrivilege]  Response: ok
+[2019/06/06 23:01:30][INFO][loginUser]  Received request to login user
+[2019/06/06 23:01:30][INFO][loginUser]  Request:
+{"email":"aaa@aaa.aaa","password":"qweQWE123!"}
+[2019/06/06 23:01:30][INFO][loginUser]  Mapping JSON to request model
+[2019/06/06 23:01:30][INFO][loginUser]  Mapped to JSON
+[2019/06/06 23:01:30][INFO][loginUser]  Getting result code...
+[2019/06/06 23:01:30][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:01:30][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:01:30][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:01:30][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:01:30][INFO][getSalt]  Retrieving salt from database...
+[2019/06/06 23:01:30][INFO][getSalt]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:01:30][INFO][getSalt]  Query succeeded
+[2019/06/06 23:01:30][INFO][getSalt]  Getting salt from resultSet
+[2019/06/06 23:01:30][INFO][isCorrectPass]  [LoginRequestModel] SALT: fb350230
+[2019/06/06 23:01:30][INFO][unhashPassword]  Converting salt string to byte[]
+[2019/06/06 23:01:30][INFO][unhashPassword]  [HashPassModel] SALT: fb350230
+[2019/06/06 23:01:30][INFO][unhashPassword]  Salt: fb350230
+[2019/06/06 23:01:30][INFO][unhashPassword]  Unhashing password...
+[2019/06/06 23:01:30][INFO][unhashPassword]  Unhashed password.
+[2019/06/06 23:01:30][INFO][isCorrectPass]  Checking entered password
+[2019/06/06 23:01:30][INFO][getHashPass]  Retrieving hashed password from database...
+[2019/06/06 23:01:30][INFO][getHashPass]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT pword FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:01:30][INFO][getHashPass]  Query succeeded
+[2019/06/06 23:01:30][INFO][getHashPass]  Getting password from resultSet
+[2019/06/06 23:01:30][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:01:30][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:01:30][INFO][loginUser]  Result code: 120
+[2019/06/06 23:01:30][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: null
+}
+[2019/06/06 23:01:30][INFO][loginUser]  Login ok - creating session...
+[2019/06/06 23:01:30][INFO][loginUser]  SESSION ID: 8ec402f7a5ebfbc1dc011f17178ebf56632e78a6da71eb7b0ce76216b1bae40aa393921cc386313aac37b5b8745f990ab8f431ca6c010e5f55939e9e852993ff
+[2019/06/06 23:01:30][INFO][loginUser]  Checking for existing/active sessions...
+[2019/06/06 23:01:30][INFO][getSessionID]  Getting sessionID for aaa@aaa.aaa
+[2019/06/06 23:01:30][INFO][getSessionID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:01:30][INFO][getSessionID]  Query succeeded
+[2019/06/06 23:01:30][INFO][isEmailInDB]  Checking if user is already in DB
+[2019/06/06 23:01:30][INFO][isEmailInDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:01:30][INFO][isEmailInDB]  Query Success. 
+[2019/06/06 23:01:30][INFO][isSessionActive]  Checking if user has active session...
+[2019/06/06 23:01:30][INFO][isSessionActive]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cs122b_db143.sessions WHERE sessionID = '079aa67d8add547faab095851f054c1181c82f9c5087ad20beee44163e88d471a80208a2e829c4090ab35dca4814503ff929e49d1a831ea962774e90a22dc1d0' AND email = 'aaa@aaa.aaa' AND status = 1
+[2019/06/06 23:01:30][INFO][isSessionActive]  Query Success.
+[2019/06/06 23:01:30][INFO][loginUser]  Creating new session...
+[2019/06/06 23:01:30][INFO][insertSessionIntoDB]  Inserting user into database...
+[2019/06/06 23:01:30][INFO][insertSessionIntoDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cs122b_db143.sessions (sessionID, email, status, timeCreated, lastUsed, exprTime) VALUES ('8ec402f7a5ebfbc1dc011f17178ebf56632e78a6da71eb7b0ce76216b1bae40aa393921cc386313aac37b5b8745f990ab8f431ca6c010e5f55939e9e852993ff', 'aaa@aaa.aaa', 1, '2019-06-06 23:01:30.424', '2019-06-06 23:01:30.424', '2019-06-07 00:41:30.424')
+[2019/06/06 23:01:30][INFO][insertSessionIntoDB]  Query succeeded
+[2019/06/06 23:01:30][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: 8ec402f7a5ebfbc1dc011f17178ebf56632e78a6da71eb7b0ce76216b1bae40aa393921cc386313aac37b5b8745f990ab8f431ca6c010e5f55939e9e852993ff
+}
+[2019/06/06 23:01:33][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 23:01:33][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":3}
+[2019/06/06 23:01:33][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 23:01:33][INFO][userPrivilege]  Getting result code...
+[2019/06/06 23:01:33][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:01:33][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:01:33][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:01:33][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:01:33][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:01:33][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:01:34][INFO][getPriv]  Query succeeded
+[2019/06/06 23:01:34][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:01:34][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:01:34][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:01:34][INFO][getPriv]  Query succeeded
+[2019/06/06 23:01:34][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:01:34][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 23:01:34][INFO][userPrivilege]  Result code: 141
+[2019/06/06 23:01:34][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 23:01:34][INFO][userPrivilege]  Response: ok
+[2019/06/06 23:01:36][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 23:01:36][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":4}
+[2019/06/06 23:01:36][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 23:01:36][INFO][userPrivilege]  Getting result code...
+[2019/06/06 23:01:36][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:01:36][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:01:36][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:01:36][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:01:36][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:01:36][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:01:36][INFO][getPriv]  Query succeeded
+[2019/06/06 23:01:36][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:01:36][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:01:36][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:01:36][INFO][getPriv]  Query succeeded
+[2019/06/06 23:01:36][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:01:36][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 23:01:36][INFO][userPrivilege]  Result code: 141
+[2019/06/06 23:01:36][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 23:01:36][INFO][userPrivilege]  Response: ok
+[2019/06/06 23:05:07][INFO][loginUser]  Received request to login user
+[2019/06/06 23:05:07][INFO][loginUser]  Request:
+{"email":"aaa@aaa.aaa","password":"qweQWE123!"}
+[2019/06/06 23:05:07][INFO][loginUser]  Mapping JSON to request model
+[2019/06/06 23:05:07][INFO][loginUser]  Mapped to JSON
+[2019/06/06 23:05:07][INFO][loginUser]  Getting result code...
+[2019/06/06 23:05:07][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:05:07][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:05:07][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:05:07][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:05:07][INFO][getSalt]  Retrieving salt from database...
+[2019/06/06 23:05:07][INFO][getSalt]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:05:07][INFO][getSalt]  Query succeeded
+[2019/06/06 23:05:07][INFO][getSalt]  Getting salt from resultSet
+[2019/06/06 23:05:07][INFO][isCorrectPass]  [LoginRequestModel] SALT: fb350230
+[2019/06/06 23:05:07][INFO][unhashPassword]  Converting salt string to byte[]
+[2019/06/06 23:05:07][INFO][unhashPassword]  [HashPassModel] SALT: fb350230
+[2019/06/06 23:05:07][INFO][unhashPassword]  Salt: fb350230
+[2019/06/06 23:05:07][INFO][unhashPassword]  Unhashing password...
+[2019/06/06 23:05:07][INFO][unhashPassword]  Unhashed password.
+[2019/06/06 23:05:07][INFO][isCorrectPass]  Checking entered password
+[2019/06/06 23:05:07][INFO][getHashPass]  Retrieving hashed password from database...
+[2019/06/06 23:05:07][INFO][getHashPass]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT pword FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:05:07][INFO][getHashPass]  Query succeeded
+[2019/06/06 23:05:07][INFO][getHashPass]  Getting password from resultSet
+[2019/06/06 23:05:07][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:05:07][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:05:07][INFO][loginUser]  Result code: 120
+[2019/06/06 23:05:07][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: null
+}
+[2019/06/06 23:05:07][INFO][loginUser]  Login ok - creating session...
+[2019/06/06 23:05:07][INFO][loginUser]  SESSION ID: 8b235cfc557074eeee1e71dff2dc28251ef7bcf39ec4e494bef0f0f73565fd91114e002265b58d9627f9af976c7d215daf3c5bcac9cc96e135474ea5d8425509
+[2019/06/06 23:05:07][INFO][loginUser]  Checking for existing/active sessions...
+[2019/06/06 23:05:07][INFO][getSessionID]  Getting sessionID for aaa@aaa.aaa
+[2019/06/06 23:05:07][INFO][getSessionID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:05:07][INFO][getSessionID]  Query succeeded
+[2019/06/06 23:05:07][INFO][isEmailInDB]  Checking if user is already in DB
+[2019/06/06 23:05:07][INFO][isEmailInDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:05:07][INFO][isEmailInDB]  Query Success. 
+[2019/06/06 23:05:07][INFO][isSessionActive]  Checking if user has active session...
+[2019/06/06 23:05:07][INFO][isSessionActive]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cs122b_db143.sessions WHERE sessionID = '079aa67d8add547faab095851f054c1181c82f9c5087ad20beee44163e88d471a80208a2e829c4090ab35dca4814503ff929e49d1a831ea962774e90a22dc1d0' AND email = 'aaa@aaa.aaa' AND status = 1
+[2019/06/06 23:05:07][INFO][isSessionActive]  Query Success.
+[2019/06/06 23:05:07][INFO][loginUser]  Creating new session...
+[2019/06/06 23:05:07][INFO][insertSessionIntoDB]  Inserting user into database...
+[2019/06/06 23:05:07][INFO][insertSessionIntoDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cs122b_db143.sessions (sessionID, email, status, timeCreated, lastUsed, exprTime) VALUES ('8b235cfc557074eeee1e71dff2dc28251ef7bcf39ec4e494bef0f0f73565fd91114e002265b58d9627f9af976c7d215daf3c5bcac9cc96e135474ea5d8425509', 'aaa@aaa.aaa', 1, '2019-06-06 23:05:07.515', '2019-06-06 23:05:07.515', '2019-06-07 00:45:07.515')
+[2019/06/06 23:05:07][INFO][insertSessionIntoDB]  Query succeeded
+[2019/06/06 23:05:07][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: 8b235cfc557074eeee1e71dff2dc28251ef7bcf39ec4e494bef0f0f73565fd91114e002265b58d9627f9af976c7d215daf3c5bcac9cc96e135474ea5d8425509
+}
+[2019/06/06 23:05:10][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 23:05:10][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":3}
+[2019/06/06 23:05:10][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 23:05:10][INFO][userPrivilege]  Getting result code...
+[2019/06/06 23:05:10][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:05:10][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:05:10][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:05:11][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:05:11][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:05:11][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:05:11][INFO][getPriv]  Query succeeded
+[2019/06/06 23:05:11][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:05:11][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:05:11][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:05:12][INFO][getPriv]  Query succeeded
+[2019/06/06 23:05:12][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:05:12][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 23:05:12][INFO][userPrivilege]  Result code: 141
+[2019/06/06 23:05:12][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 23:05:12][INFO][userPrivilege]  Response: ok
+[2019/06/06 23:05:14][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 23:05:14][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":4}
+[2019/06/06 23:05:14][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 23:05:14][INFO][userPrivilege]  Getting result code...
+[2019/06/06 23:05:14][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:05:14][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:05:14][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:05:14][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:05:14][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:05:14][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:05:14][INFO][getPriv]  Query succeeded
+[2019/06/06 23:05:14][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:05:14][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:05:14][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:05:14][INFO][getPriv]  Query succeeded
+[2019/06/06 23:05:14][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:05:14][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 23:05:14][INFO][userPrivilege]  Result code: 141
+[2019/06/06 23:05:14][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 23:05:14][INFO][userPrivilege]  Response: ok
+[2019/06/06 23:06:01][INFO][loginUser]  Received request to login user
+[2019/06/06 23:06:01][INFO][loginUser]  Request:
+{"email":"aaa@aaa.aaa","password":"qweQWE123!"}
+[2019/06/06 23:06:01][INFO][loginUser]  Mapping JSON to request model
+[2019/06/06 23:06:01][INFO][loginUser]  Mapped to JSON
+[2019/06/06 23:06:01][INFO][loginUser]  Getting result code...
+[2019/06/06 23:06:01][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:06:01][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:06:01][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:06:01][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:06:01][INFO][getSalt]  Retrieving salt from database...
+[2019/06/06 23:06:01][INFO][getSalt]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:06:01][INFO][getSalt]  Query succeeded
+[2019/06/06 23:06:01][INFO][getSalt]  Getting salt from resultSet
+[2019/06/06 23:06:01][INFO][isCorrectPass]  [LoginRequestModel] SALT: fb350230
+[2019/06/06 23:06:01][INFO][unhashPassword]  Converting salt string to byte[]
+[2019/06/06 23:06:01][INFO][unhashPassword]  [HashPassModel] SALT: fb350230
+[2019/06/06 23:06:01][INFO][unhashPassword]  Salt: fb350230
+[2019/06/06 23:06:01][INFO][unhashPassword]  Unhashing password...
+[2019/06/06 23:06:01][INFO][unhashPassword]  Unhashed password.
+[2019/06/06 23:06:01][INFO][isCorrectPass]  Checking entered password
+[2019/06/06 23:06:01][INFO][getHashPass]  Retrieving hashed password from database...
+[2019/06/06 23:06:01][INFO][getHashPass]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT pword FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:06:01][INFO][getHashPass]  Query succeeded
+[2019/06/06 23:06:01][INFO][getHashPass]  Getting password from resultSet
+[2019/06/06 23:06:01][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:06:01][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:06:01][INFO][loginUser]  Result code: 120
+[2019/06/06 23:06:01][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: null
+}
+[2019/06/06 23:06:01][INFO][loginUser]  Login ok - creating session...
+[2019/06/06 23:06:01][INFO][loginUser]  SESSION ID: 52d590c880cbaa52b4f2b24b80fcf7bcab31f13f80f4f45d023083657ddbbee2ff55cbdda0a0b6c7f3034c1bdec344366d22e775daa84939b735d3adf4e7f6c9
+[2019/06/06 23:06:01][INFO][loginUser]  Checking for existing/active sessions...
+[2019/06/06 23:06:01][INFO][getSessionID]  Getting sessionID for aaa@aaa.aaa
+[2019/06/06 23:06:01][INFO][getSessionID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:06:01][INFO][getSessionID]  Query succeeded
+[2019/06/06 23:06:01][INFO][isEmailInDB]  Checking if user is already in DB
+[2019/06/06 23:06:01][INFO][isEmailInDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:06:01][INFO][isEmailInDB]  Query Success. 
+[2019/06/06 23:06:01][INFO][isSessionActive]  Checking if user has active session...
+[2019/06/06 23:06:01][INFO][isSessionActive]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cs122b_db143.sessions WHERE sessionID = '079aa67d8add547faab095851f054c1181c82f9c5087ad20beee44163e88d471a80208a2e829c4090ab35dca4814503ff929e49d1a831ea962774e90a22dc1d0' AND email = 'aaa@aaa.aaa' AND status = 1
+[2019/06/06 23:06:01][INFO][isSessionActive]  Query Success.
+[2019/06/06 23:06:01][INFO][loginUser]  Creating new session...
+[2019/06/06 23:06:01][INFO][insertSessionIntoDB]  Inserting user into database...
+[2019/06/06 23:06:01][INFO][insertSessionIntoDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cs122b_db143.sessions (sessionID, email, status, timeCreated, lastUsed, exprTime) VALUES ('52d590c880cbaa52b4f2b24b80fcf7bcab31f13f80f4f45d023083657ddbbee2ff55cbdda0a0b6c7f3034c1bdec344366d22e775daa84939b735d3adf4e7f6c9', 'aaa@aaa.aaa', 1, '2019-06-06 23:06:01.571', '2019-06-06 23:06:01.571', '2019-06-07 00:46:01.571')
+[2019/06/06 23:06:01][INFO][insertSessionIntoDB]  Query succeeded
+[2019/06/06 23:06:01][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: 52d590c880cbaa52b4f2b24b80fcf7bcab31f13f80f4f45d023083657ddbbee2ff55cbdda0a0b6c7f3034c1bdec344366d22e775daa84939b735d3adf4e7f6c9
+}
+[2019/06/06 23:06:07][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 23:06:07][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":3}
+[2019/06/06 23:06:07][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 23:06:07][INFO][userPrivilege]  Getting result code...
+[2019/06/06 23:06:07][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:06:07][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:06:07][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:06:07][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:06:07][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:06:07][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:06:07][INFO][getPriv]  Query succeeded
+[2019/06/06 23:06:07][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:06:07][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:06:07][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:06:07][INFO][getPriv]  Query succeeded
+[2019/06/06 23:06:07][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:06:07][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 23:06:07][INFO][userPrivilege]  Result code: 141
+[2019/06/06 23:06:07][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 23:06:07][INFO][userPrivilege]  Response: ok
+[2019/06/06 23:06:08][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 23:06:08][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":4}
+[2019/06/06 23:06:08][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 23:06:08][INFO][userPrivilege]  Getting result code...
+[2019/06/06 23:06:08][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:06:08][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:06:08][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:06:08][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:06:08][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:06:08][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:06:08][INFO][getPriv]  Query succeeded
+[2019/06/06 23:06:08][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:06:08][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:06:08][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:06:08][INFO][getPriv]  Query succeeded
+[2019/06/06 23:06:08][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:06:08][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 23:06:08][INFO][userPrivilege]  Result code: 141
+[2019/06/06 23:06:08][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 23:06:08][INFO][userPrivilege]  Response: ok
+[2019/06/06 23:10:14][INFO][loginUser]  Received request to login user
+[2019/06/06 23:10:14][INFO][loginUser]  Request:
+{"email":"aaa@aaa.aaa","password":"qweQWE123!"}
+[2019/06/06 23:10:14][INFO][loginUser]  Mapping JSON to request model
+[2019/06/06 23:10:14][INFO][loginUser]  Mapped to JSON
+[2019/06/06 23:10:14][INFO][loginUser]  Getting result code...
+[2019/06/06 23:10:14][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:10:14][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:10:14][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:10:14][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:10:14][INFO][getSalt]  Retrieving salt from database...
+[2019/06/06 23:10:14][INFO][getSalt]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:10:14][INFO][getSalt]  Query succeeded
+[2019/06/06 23:10:14][INFO][getSalt]  Getting salt from resultSet
+[2019/06/06 23:10:14][INFO][isCorrectPass]  [LoginRequestModel] SALT: fb350230
+[2019/06/06 23:10:14][INFO][unhashPassword]  Converting salt string to byte[]
+[2019/06/06 23:10:14][INFO][unhashPassword]  [HashPassModel] SALT: fb350230
+[2019/06/06 23:10:14][INFO][unhashPassword]  Salt: fb350230
+[2019/06/06 23:10:14][INFO][unhashPassword]  Unhashing password...
+[2019/06/06 23:10:14][INFO][unhashPassword]  Unhashed password.
+[2019/06/06 23:10:14][INFO][isCorrectPass]  Checking entered password
+[2019/06/06 23:10:14][INFO][getHashPass]  Retrieving hashed password from database...
+[2019/06/06 23:10:14][INFO][getHashPass]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT pword FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:10:14][INFO][getHashPass]  Query succeeded
+[2019/06/06 23:10:14][INFO][getHashPass]  Getting password from resultSet
+[2019/06/06 23:10:14][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:10:14][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:10:14][INFO][loginUser]  Result code: 120
+[2019/06/06 23:10:14][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: null
+}
+[2019/06/06 23:10:14][INFO][loginUser]  Login ok - creating session...
+[2019/06/06 23:10:14][INFO][loginUser]  SESSION ID: b0ba229d27eb466f357128a7403ddd7da5414a1f6dcaafa771b369f93db568e0960bf3fc570dc4a59559418f09782f8f2e9da8b6ec98ee6e3f33139be93976d7
+[2019/06/06 23:10:14][INFO][loginUser]  Checking for existing/active sessions...
+[2019/06/06 23:10:14][INFO][getSessionID]  Getting sessionID for aaa@aaa.aaa
+[2019/06/06 23:10:14][INFO][getSessionID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:10:14][INFO][getSessionID]  Query succeeded
+[2019/06/06 23:10:14][INFO][isEmailInDB]  Checking if user is already in DB
+[2019/06/06 23:10:14][INFO][isEmailInDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:10:14][INFO][isEmailInDB]  Query Success. 
+[2019/06/06 23:10:14][INFO][isSessionActive]  Checking if user has active session...
+[2019/06/06 23:10:14][INFO][isSessionActive]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cs122b_db143.sessions WHERE sessionID = '079aa67d8add547faab095851f054c1181c82f9c5087ad20beee44163e88d471a80208a2e829c4090ab35dca4814503ff929e49d1a831ea962774e90a22dc1d0' AND email = 'aaa@aaa.aaa' AND status = 1
+[2019/06/06 23:10:14][INFO][isSessionActive]  Query Success.
+[2019/06/06 23:10:14][INFO][loginUser]  Creating new session...
+[2019/06/06 23:10:14][INFO][insertSessionIntoDB]  Inserting user into database...
+[2019/06/06 23:10:14][INFO][insertSessionIntoDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cs122b_db143.sessions (sessionID, email, status, timeCreated, lastUsed, exprTime) VALUES ('b0ba229d27eb466f357128a7403ddd7da5414a1f6dcaafa771b369f93db568e0960bf3fc570dc4a59559418f09782f8f2e9da8b6ec98ee6e3f33139be93976d7', 'aaa@aaa.aaa', 1, '2019-06-06 23:10:14.601', '2019-06-06 23:10:14.601', '2019-06-07 00:50:14.601')
+[2019/06/06 23:10:14][INFO][insertSessionIntoDB]  Query succeeded
+[2019/06/06 23:10:14][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: b0ba229d27eb466f357128a7403ddd7da5414a1f6dcaafa771b369f93db568e0960bf3fc570dc4a59559418f09782f8f2e9da8b6ec98ee6e3f33139be93976d7
+}
+[2019/06/06 23:10:18][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 23:10:18][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":3}
+[2019/06/06 23:10:18][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 23:10:18][INFO][userPrivilege]  Getting result code...
+[2019/06/06 23:10:18][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:10:18][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:10:18][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:10:18][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:10:18][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:10:18][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:10:18][INFO][getPriv]  Query succeeded
+[2019/06/06 23:10:18][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:10:18][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:10:18][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:10:18][INFO][getPriv]  Query succeeded
+[2019/06/06 23:10:18][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:10:18][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 23:10:18][INFO][userPrivilege]  Result code: 141
+[2019/06/06 23:10:18][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 23:10:18][INFO][userPrivilege]  Response: ok
+[2019/06/06 23:10:19][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 23:10:19][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":4}
+[2019/06/06 23:10:19][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 23:10:19][INFO][userPrivilege]  Getting result code...
+[2019/06/06 23:10:19][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:10:19][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:10:19][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:10:19][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:10:19][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:10:19][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:10:19][INFO][getPriv]  Query succeeded
+[2019/06/06 23:10:19][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:10:19][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:10:19][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:10:19][INFO][getPriv]  Query succeeded
+[2019/06/06 23:10:19][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:10:19][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 23:10:19][INFO][userPrivilege]  Result code: 141
+[2019/06/06 23:10:19][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 23:10:19][INFO][userPrivilege]  Response: ok
+[2019/06/06 23:13:09][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 23:13:09][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":4}
+[2019/06/06 23:13:09][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 23:13:09][INFO][userPrivilege]  Getting result code...
+[2019/06/06 23:13:09][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:13:09][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:13:09][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:13:09][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:13:09][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:13:09][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:13:09][INFO][getPriv]  Query succeeded
+[2019/06/06 23:13:09][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:13:09][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:13:09][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:13:09][INFO][getPriv]  Query succeeded
+[2019/06/06 23:13:09][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:13:09][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 23:13:09][INFO][userPrivilege]  Result code: 141
+[2019/06/06 23:13:09][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 23:13:09][INFO][userPrivilege]  Response: ok
+[2019/06/06 23:13:50][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 23:13:50][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":4}
+[2019/06/06 23:13:50][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 23:13:50][INFO][userPrivilege]  Getting result code...
+[2019/06/06 23:13:50][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:13:50][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:13:50][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:13:50][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:13:50][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:13:50][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:13:50][INFO][getPriv]  Query succeeded
+[2019/06/06 23:13:50][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:13:50][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:13:50][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:13:50][INFO][getPriv]  Query succeeded
+[2019/06/06 23:13:50][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:13:50][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 23:13:50][INFO][userPrivilege]  Result code: 141
+[2019/06/06 23:13:50][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 23:13:50][INFO][userPrivilege]  Response: ok
+[2019/06/06 23:14:21][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 23:14:21][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":4}
+[2019/06/06 23:14:21][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 23:14:21][INFO][userPrivilege]  Getting result code...
+[2019/06/06 23:14:21][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:14:21][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:14:21][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:14:21][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:14:21][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:14:21][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:14:21][INFO][getPriv]  Query succeeded
+[2019/06/06 23:14:21][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:14:21][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:14:21][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:14:21][INFO][getPriv]  Query succeeded
+[2019/06/06 23:14:21][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:14:21][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 23:14:21][INFO][userPrivilege]  Result code: 141
+[2019/06/06 23:14:21][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 23:14:21][INFO][userPrivilege]  Response: ok
+[2019/06/06 23:14:51][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 23:14:51][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":4}
+[2019/06/06 23:14:51][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 23:14:51][INFO][userPrivilege]  Getting result code...
+[2019/06/06 23:14:51][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:14:51][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:14:51][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:14:51][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:14:51][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:14:51][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:14:51][INFO][getPriv]  Query succeeded
+[2019/06/06 23:14:51][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:14:51][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:14:51][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:14:51][INFO][getPriv]  Query succeeded
+[2019/06/06 23:14:51][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:14:51][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 23:14:51][INFO][userPrivilege]  Result code: 141
+[2019/06/06 23:14:51][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 23:14:51][INFO][userPrivilege]  Response: ok
+[2019/06/06 23:17:53][INFO][loginUser]  Received request to login user
+[2019/06/06 23:17:53][INFO][loginUser]  Request:
+{"email":"aaa@aaa.aaa","password":"qweQWE123!"}
+[2019/06/06 23:17:53][INFO][loginUser]  Mapping JSON to request model
+[2019/06/06 23:17:53][INFO][loginUser]  Mapped to JSON
+[2019/06/06 23:17:53][INFO][loginUser]  Getting result code...
+[2019/06/06 23:17:53][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:17:53][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:17:53][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:17:53][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:17:53][INFO][getSalt]  Retrieving salt from database...
+[2019/06/06 23:17:53][INFO][getSalt]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:17:53][INFO][getSalt]  Query succeeded
+[2019/06/06 23:17:53][INFO][getSalt]  Getting salt from resultSet
+[2019/06/06 23:17:53][INFO][isCorrectPass]  [LoginRequestModel] SALT: fb350230
+[2019/06/06 23:17:53][INFO][unhashPassword]  Converting salt string to byte[]
+[2019/06/06 23:17:53][INFO][unhashPassword]  [HashPassModel] SALT: fb350230
+[2019/06/06 23:17:53][INFO][unhashPassword]  Salt: fb350230
+[2019/06/06 23:17:53][INFO][unhashPassword]  Unhashing password...
+[2019/06/06 23:17:53][INFO][unhashPassword]  Unhashed password.
+[2019/06/06 23:17:53][INFO][isCorrectPass]  Checking entered password
+[2019/06/06 23:17:53][INFO][getHashPass]  Retrieving hashed password from database...
+[2019/06/06 23:17:53][INFO][getHashPass]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT pword FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:17:53][INFO][getHashPass]  Query succeeded
+[2019/06/06 23:17:53][INFO][getHashPass]  Getting password from resultSet
+[2019/06/06 23:17:53][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:17:53][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:17:53][INFO][loginUser]  Result code: 120
+[2019/06/06 23:17:53][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: null
+}
+[2019/06/06 23:17:53][INFO][loginUser]  Login ok - creating session...
+[2019/06/06 23:17:53][INFO][loginUser]  SESSION ID: 4425b82732442f8d7f025e9df7f02d0e2349a378e90ffefac49cfdb96913e2884c4c3bab8a3535955c950c50761bdafec4b0cff5378323184cb1666c89f76c58
+[2019/06/06 23:17:53][INFO][loginUser]  Checking for existing/active sessions...
+[2019/06/06 23:17:53][INFO][getSessionID]  Getting sessionID for aaa@aaa.aaa
+[2019/06/06 23:17:53][INFO][getSessionID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:17:53][INFO][getSessionID]  Query succeeded
+[2019/06/06 23:17:53][INFO][isEmailInDB]  Checking if user is already in DB
+[2019/06/06 23:17:53][INFO][isEmailInDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:17:53][INFO][isEmailInDB]  Query Success. 
+[2019/06/06 23:17:53][INFO][isSessionActive]  Checking if user has active session...
+[2019/06/06 23:17:53][INFO][isSessionActive]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cs122b_db143.sessions WHERE sessionID = '079aa67d8add547faab095851f054c1181c82f9c5087ad20beee44163e88d471a80208a2e829c4090ab35dca4814503ff929e49d1a831ea962774e90a22dc1d0' AND email = 'aaa@aaa.aaa' AND status = 1
+[2019/06/06 23:17:53][INFO][isSessionActive]  Query Success.
+[2019/06/06 23:17:53][INFO][loginUser]  Creating new session...
+[2019/06/06 23:17:53][INFO][insertSessionIntoDB]  Inserting user into database...
+[2019/06/06 23:17:53][INFO][insertSessionIntoDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cs122b_db143.sessions (sessionID, email, status, timeCreated, lastUsed, exprTime) VALUES ('4425b82732442f8d7f025e9df7f02d0e2349a378e90ffefac49cfdb96913e2884c4c3bab8a3535955c950c50761bdafec4b0cff5378323184cb1666c89f76c58', 'aaa@aaa.aaa', 1, '2019-06-06 23:17:53.358', '2019-06-06 23:17:53.358', '2019-06-07 00:57:53.358')
+[2019/06/06 23:17:53][INFO][insertSessionIntoDB]  Query succeeded
+[2019/06/06 23:17:53][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: 4425b82732442f8d7f025e9df7f02d0e2349a378e90ffefac49cfdb96913e2884c4c3bab8a3535955c950c50761bdafec4b0cff5378323184cb1666c89f76c58
+}
+[2019/06/06 23:17:56][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 23:17:56][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":3}
+[2019/06/06 23:17:56][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 23:17:56][INFO][userPrivilege]  Getting result code...
+[2019/06/06 23:17:56][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:17:56][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:17:56][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:17:56][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:17:56][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:17:56][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:17:56][INFO][getPriv]  Query succeeded
+[2019/06/06 23:17:56][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:17:56][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:17:56][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:17:56][INFO][getPriv]  Query succeeded
+[2019/06/06 23:17:56][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:17:56][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 23:17:56][INFO][userPrivilege]  Result code: 141
+[2019/06/06 23:17:56][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 23:17:56][INFO][userPrivilege]  Response: ok
+[2019/06/06 23:17:59][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 23:17:59][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":4}
+[2019/06/06 23:17:59][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 23:17:59][INFO][userPrivilege]  Getting result code...
+[2019/06/06 23:17:59][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:17:59][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:17:59][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:17:59][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:17:59][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:17:59][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:17:59][INFO][getPriv]  Query succeeded
+[2019/06/06 23:17:59][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:17:59][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:17:59][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:17:59][INFO][getPriv]  Query succeeded
+[2019/06/06 23:17:59][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:17:59][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 23:17:59][INFO][userPrivilege]  Result code: 141
+[2019/06/06 23:17:59][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 23:17:59][INFO][userPrivilege]  Response: ok
+[2019/06/06 23:18:22][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 23:18:22][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":3}
+[2019/06/06 23:18:22][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 23:18:22][INFO][userPrivilege]  Getting result code...
+[2019/06/06 23:18:22][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:18:22][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:18:22][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:18:22][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:18:22][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:18:22][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:18:22][INFO][getPriv]  Query succeeded
+[2019/06/06 23:18:22][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:18:22][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:18:22][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:18:22][INFO][getPriv]  Query succeeded
+[2019/06/06 23:18:22][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:18:22][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 23:18:22][INFO][userPrivilege]  Result code: 141
+[2019/06/06 23:18:22][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 23:18:22][INFO][userPrivilege]  Response: ok
+[2019/06/06 23:22:42][INFO][loginUser]  Received request to login user
+[2019/06/06 23:22:42][INFO][loginUser]  Request:
+{"email":"a@a.a","password":"sadsad"}
+[2019/06/06 23:22:42][INFO][loginUser]  Mapping JSON to request model
+[2019/06/06 23:22:42][INFO][loginUser]  Mapped to JSON
+[2019/06/06 23:22:42][INFO][loginUser]  Getting result code...
+[2019/06/06 23:22:42][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:22:42][INFO][hasValidEmail]  Invalid email format!!!
+[2019/06/06 23:22:42][INFO][resultCode]  Wrong email format.
+[2019/06/06 23:22:42][INFO][loginUser]  Result code: -11
+[2019/06/06 23:22:42][INFO][loginUser]  RegisterResponseModel{
+ResultCode: -11
+Message: Email address has invalid format.
+SessionID: null
+}
+[2019/06/06 23:22:59][INFO][loginUser]  Received request to login user
+[2019/06/06 23:22:59][INFO][loginUser]  Request:
+{"email":"aaa@aaa.a","password":"qweQWE123!"}
+[2019/06/06 23:22:59][INFO][loginUser]  Mapping JSON to request model
+[2019/06/06 23:22:59][INFO][loginUser]  Mapped to JSON
+[2019/06/06 23:22:59][INFO][loginUser]  Getting result code...
+[2019/06/06 23:22:59][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:22:59][INFO][hasValidEmail]  Invalid email format!!!
+[2019/06/06 23:22:59][INFO][resultCode]  Wrong email format.
+[2019/06/06 23:22:59][INFO][loginUser]  Result code: -11
+[2019/06/06 23:22:59][INFO][loginUser]  RegisterResponseModel{
+ResultCode: -11
+Message: Email address has invalid format.
+SessionID: null
+}
+[2019/06/06 23:23:28][INFO][loginUser]  Received request to login user
+[2019/06/06 23:23:28][INFO][loginUser]  Request:
+{"email":"aaa@aaa.aa\n","password":"qweQWE123!"}
+[2019/06/06 23:23:28][INFO][loginUser]  Mapping JSON to request model
+[2019/06/06 23:23:28][INFO][loginUser]  Mapped to JSON
+[2019/06/06 23:23:28][INFO][loginUser]  Getting result code...
+[2019/06/06 23:23:28][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:23:28][INFO][hasValidEmail]  Invalid email format!!!
+[2019/06/06 23:23:28][INFO][resultCode]  Wrong email format.
+[2019/06/06 23:23:28][INFO][loginUser]  Result code: -11
+[2019/06/06 23:23:28][INFO][loginUser]  RegisterResponseModel{
+ResultCode: -11
+Message: Email address has invalid format.
+SessionID: null
+}
+[2019/06/06 23:24:21][INFO][loginUser]  Received request to login user
+[2019/06/06 23:24:21][INFO][loginUser]  Request:
+{"email":"asd@asd.asd","password":"asdasd"}
+[2019/06/06 23:24:21][INFO][loginUser]  Mapping JSON to request model
+[2019/06/06 23:24:21][INFO][loginUser]  Mapped to JSON
+[2019/06/06 23:24:21][INFO][loginUser]  Getting result code...
+[2019/06/06 23:24:21][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:24:21][INFO][hasValidEmail]  EMAIL: asd@asd.asd
+[2019/06/06 23:24:21][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'asd@asd.asd'
+[2019/06/06 23:24:21][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:24:21][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'asd@asd.asd'
+[2019/06/06 23:24:21][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:24:21][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'asd@asd.asd'
+[2019/06/06 23:24:21][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:24:21][INFO][resultCode]  User not in DB
+[2019/06/06 23:24:21][INFO][loginUser]  Result code: 14
+[2019/06/06 23:24:21][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 14
+Message: User not found.
+SessionID: null
+}
+[2019/06/06 23:24:32][INFO][loginUser]  Received request to login user
+[2019/06/06 23:24:32][INFO][loginUser]  Request:
+{"email":"aaa@aaa.aaa","password":"asdasdasda"}
+[2019/06/06 23:24:32][INFO][loginUser]  Mapping JSON to request model
+[2019/06/06 23:24:32][INFO][loginUser]  Mapped to JSON
+[2019/06/06 23:24:32][INFO][loginUser]  Getting result code...
+[2019/06/06 23:24:32][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:24:32][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:24:32][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:24:32][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:24:32][INFO][getSalt]  Retrieving salt from database...
+[2019/06/06 23:24:32][INFO][getSalt]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:24:32][INFO][getSalt]  Query succeeded
+[2019/06/06 23:24:32][INFO][getSalt]  Getting salt from resultSet
+[2019/06/06 23:24:32][INFO][isCorrectPass]  [LoginRequestModel] SALT: fb350230
+[2019/06/06 23:24:32][INFO][unhashPassword]  Converting salt string to byte[]
+[2019/06/06 23:24:32][INFO][unhashPassword]  [HashPassModel] SALT: fb350230
+[2019/06/06 23:24:32][INFO][unhashPassword]  Salt: fb350230
+[2019/06/06 23:24:32][INFO][unhashPassword]  Unhashing password...
+[2019/06/06 23:24:32][INFO][unhashPassword]  Unhashed password.
+[2019/06/06 23:24:32][INFO][isCorrectPass]  Checking entered password
+[2019/06/06 23:24:32][INFO][getHashPass]  Retrieving hashed password from database...
+[2019/06/06 23:24:32][INFO][getHashPass]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT pword FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:24:32][INFO][getHashPass]  Query succeeded
+[2019/06/06 23:24:32][INFO][getHashPass]  Getting password from resultSet
+[2019/06/06 23:24:32][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:24:33][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:24:33][INFO][resultCode]  Incorrect Password Entered
+[2019/06/06 23:24:33][INFO][loginUser]  Result code: 11
+[2019/06/06 23:24:33][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 11
+Message: Passwords do not match.
+SessionID: null
+}
+[2019/06/06 23:24:41][INFO][loginUser]  Received request to login user
+[2019/06/06 23:24:41][INFO][loginUser]  Request:
+{"email":"aaa@aaa.aaa","password":"qweQWE123!"}
+[2019/06/06 23:24:41][INFO][loginUser]  Mapping JSON to request model
+[2019/06/06 23:24:41][INFO][loginUser]  Mapped to JSON
+[2019/06/06 23:24:41][INFO][loginUser]  Getting result code...
+[2019/06/06 23:24:41][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:24:41][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:24:41][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:24:41][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:24:41][INFO][getSalt]  Retrieving salt from database...
+[2019/06/06 23:24:41][INFO][getSalt]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:24:41][INFO][getSalt]  Query succeeded
+[2019/06/06 23:24:41][INFO][getSalt]  Getting salt from resultSet
+[2019/06/06 23:24:41][INFO][isCorrectPass]  [LoginRequestModel] SALT: fb350230
+[2019/06/06 23:24:41][INFO][unhashPassword]  Converting salt string to byte[]
+[2019/06/06 23:24:41][INFO][unhashPassword]  [HashPassModel] SALT: fb350230
+[2019/06/06 23:24:41][INFO][unhashPassword]  Salt: fb350230
+[2019/06/06 23:24:41][INFO][unhashPassword]  Unhashing password...
+[2019/06/06 23:24:41][INFO][unhashPassword]  Unhashed password.
+[2019/06/06 23:24:41][INFO][isCorrectPass]  Checking entered password
+[2019/06/06 23:24:41][INFO][getHashPass]  Retrieving hashed password from database...
+[2019/06/06 23:24:41][INFO][getHashPass]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT pword FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:24:41][INFO][getHashPass]  Query succeeded
+[2019/06/06 23:24:41][INFO][getHashPass]  Getting password from resultSet
+[2019/06/06 23:24:41][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:24:41][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:24:41][INFO][loginUser]  Result code: 120
+[2019/06/06 23:24:41][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: null
+}
+[2019/06/06 23:24:41][INFO][loginUser]  Login ok - creating session...
+[2019/06/06 23:24:41][INFO][loginUser]  SESSION ID: f361cc983393e9a1b43a5715e4723bec2895c21a34fd951948ff7c5ee82a72bf1164ec74c3965187c0af0e37d03d4fa00155748b0dc2b51b9db9be9905cbbbf3
+[2019/06/06 23:24:41][INFO][loginUser]  Checking for existing/active sessions...
+[2019/06/06 23:24:41][INFO][getSessionID]  Getting sessionID for aaa@aaa.aaa
+[2019/06/06 23:24:41][INFO][getSessionID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:24:41][INFO][getSessionID]  Query succeeded
+[2019/06/06 23:24:41][INFO][isEmailInDB]  Checking if user is already in DB
+[2019/06/06 23:24:41][INFO][isEmailInDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:24:41][INFO][isEmailInDB]  Query Success. 
+[2019/06/06 23:24:41][INFO][isSessionActive]  Checking if user has active session...
+[2019/06/06 23:24:41][INFO][isSessionActive]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cs122b_db143.sessions WHERE sessionID = '079aa67d8add547faab095851f054c1181c82f9c5087ad20beee44163e88d471a80208a2e829c4090ab35dca4814503ff929e49d1a831ea962774e90a22dc1d0' AND email = 'aaa@aaa.aaa' AND status = 1
+[2019/06/06 23:24:41][INFO][isSessionActive]  Query Success.
+[2019/06/06 23:24:41][INFO][loginUser]  Creating new session...
+[2019/06/06 23:24:41][INFO][insertSessionIntoDB]  Inserting user into database...
+[2019/06/06 23:24:41][INFO][insertSessionIntoDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cs122b_db143.sessions (sessionID, email, status, timeCreated, lastUsed, exprTime) VALUES ('f361cc983393e9a1b43a5715e4723bec2895c21a34fd951948ff7c5ee82a72bf1164ec74c3965187c0af0e37d03d4fa00155748b0dc2b51b9db9be9905cbbbf3', 'aaa@aaa.aaa', 1, '2019-06-06 23:24:41.72', '2019-06-06 23:24:41.72', '2019-06-07 01:04:41.72')
+[2019/06/06 23:24:41][INFO][insertSessionIntoDB]  Query succeeded
+[2019/06/06 23:24:41][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: f361cc983393e9a1b43a5715e4723bec2895c21a34fd951948ff7c5ee82a72bf1164ec74c3965187c0af0e37d03d4fa00155748b0dc2b51b9db9be9905cbbbf3
+}
+[2019/06/06 23:24:55][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 23:24:55][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":3}
+[2019/06/06 23:24:55][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 23:24:55][INFO][userPrivilege]  Getting result code...
+[2019/06/06 23:24:55][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:24:55][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:24:55][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:24:55][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:24:55][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:24:55][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:24:55][INFO][getPriv]  Query succeeded
+[2019/06/06 23:24:55][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:24:55][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:24:55][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:24:55][INFO][getPriv]  Query succeeded
+[2019/06/06 23:24:55][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:24:55][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 23:24:55][INFO][userPrivilege]  Result code: 141
+[2019/06/06 23:24:55][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 23:24:55][INFO][userPrivilege]  Response: ok
+[2019/06/06 23:24:58][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 23:24:58][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":4}
+[2019/06/06 23:24:58][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 23:24:58][INFO][userPrivilege]  Getting result code...
+[2019/06/06 23:24:58][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:24:58][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:24:58][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:24:58][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:24:58][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:24:58][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:24:58][INFO][getPriv]  Query succeeded
+[2019/06/06 23:24:58][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:24:58][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:24:58][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:24:58][INFO][getPriv]  Query succeeded
+[2019/06/06 23:24:58][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:24:58][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 23:24:58][INFO][userPrivilege]  Result code: 141
+[2019/06/06 23:24:58][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 23:24:58][INFO][userPrivilege]  Response: ok
+[2019/06/06 23:27:27][INFO][loginUser]  Received request to login user
+[2019/06/06 23:27:27][INFO][loginUser]  Request:
+{"email":"asd@asd.asd","password":"asdasdasd"}
+[2019/06/06 23:27:27][INFO][loginUser]  Mapping JSON to request model
+[2019/06/06 23:27:27][INFO][loginUser]  Mapped to JSON
+[2019/06/06 23:27:27][INFO][loginUser]  Getting result code...
+[2019/06/06 23:27:27][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:27:27][INFO][hasValidEmail]  EMAIL: asd@asd.asd
+[2019/06/06 23:27:27][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'asd@asd.asd'
+[2019/06/06 23:27:28][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:27:28][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'asd@asd.asd'
+[2019/06/06 23:27:28][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:27:28][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'asd@asd.asd'
+[2019/06/06 23:27:28][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:27:28][INFO][resultCode]  User not in DB
+[2019/06/06 23:27:28][INFO][loginUser]  Result code: 14
+[2019/06/06 23:27:28][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 14
+Message: User not found.
+SessionID: null
+}
+[2019/06/06 23:27:37][INFO][loginUser]  Received request to login user
+[2019/06/06 23:27:37][INFO][loginUser]  Request:
+{"email":"aaa@aaa.aaa","password":"asdasdasd"}
+[2019/06/06 23:27:37][INFO][loginUser]  Mapping JSON to request model
+[2019/06/06 23:27:37][INFO][loginUser]  Mapped to JSON
+[2019/06/06 23:27:37][INFO][loginUser]  Getting result code...
+[2019/06/06 23:27:37][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:27:37][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:27:37][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:27:37][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:27:37][INFO][getSalt]  Retrieving salt from database...
+[2019/06/06 23:27:37][INFO][getSalt]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:27:37][INFO][getSalt]  Query succeeded
+[2019/06/06 23:27:37][INFO][getSalt]  Getting salt from resultSet
+[2019/06/06 23:27:37][INFO][isCorrectPass]  [LoginRequestModel] SALT: fb350230
+[2019/06/06 23:27:37][INFO][unhashPassword]  Converting salt string to byte[]
+[2019/06/06 23:27:37][INFO][unhashPassword]  [HashPassModel] SALT: fb350230
+[2019/06/06 23:27:37][INFO][unhashPassword]  Salt: fb350230
+[2019/06/06 23:27:37][INFO][unhashPassword]  Unhashing password...
+[2019/06/06 23:27:37][INFO][unhashPassword]  Unhashed password.
+[2019/06/06 23:27:37][INFO][isCorrectPass]  Checking entered password
+[2019/06/06 23:27:37][INFO][getHashPass]  Retrieving hashed password from database...
+[2019/06/06 23:27:37][INFO][getHashPass]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT pword FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:27:37][INFO][getHashPass]  Query succeeded
+[2019/06/06 23:27:37][INFO][getHashPass]  Getting password from resultSet
+[2019/06/06 23:27:37][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:27:37][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:27:37][INFO][resultCode]  Incorrect Password Entered
+[2019/06/06 23:27:37][INFO][loginUser]  Result code: 11
+[2019/06/06 23:27:37][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 11
+Message: Passwords do not match.
+SessionID: null
+}
+[2019/06/06 23:27:44][INFO][loginUser]  Received request to login user
+[2019/06/06 23:27:44][INFO][loginUser]  Request:
+{"email":"aaa@aaa.aaa","password":"qweQWE123!"}
+[2019/06/06 23:27:44][INFO][loginUser]  Mapping JSON to request model
+[2019/06/06 23:27:44][INFO][loginUser]  Mapped to JSON
+[2019/06/06 23:27:44][INFO][loginUser]  Getting result code...
+[2019/06/06 23:27:44][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:27:44][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:27:44][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:27:44][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:27:44][INFO][getSalt]  Retrieving salt from database...
+[2019/06/06 23:27:44][INFO][getSalt]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT salt FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:27:44][INFO][getSalt]  Query succeeded
+[2019/06/06 23:27:44][INFO][getSalt]  Getting salt from resultSet
+[2019/06/06 23:27:44][INFO][isCorrectPass]  [LoginRequestModel] SALT: fb350230
+[2019/06/06 23:27:44][INFO][unhashPassword]  Converting salt string to byte[]
+[2019/06/06 23:27:44][INFO][unhashPassword]  [HashPassModel] SALT: fb350230
+[2019/06/06 23:27:44][INFO][unhashPassword]  Salt: fb350230
+[2019/06/06 23:27:44][INFO][unhashPassword]  Unhashing password...
+[2019/06/06 23:27:44][INFO][unhashPassword]  Unhashed password.
+[2019/06/06 23:27:44][INFO][isCorrectPass]  Checking entered password
+[2019/06/06 23:27:44][INFO][getHashPass]  Retrieving hashed password from database...
+[2019/06/06 23:27:44][INFO][getHashPass]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT pword FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:27:44][INFO][getHashPass]  Query succeeded
+[2019/06/06 23:27:44][INFO][getHashPass]  Getting password from resultSet
+[2019/06/06 23:27:44][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:27:44][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:27:44][INFO][loginUser]  Result code: 120
+[2019/06/06 23:27:44][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: null
+}
+[2019/06/06 23:27:44][INFO][loginUser]  Login ok - creating session...
+[2019/06/06 23:27:44][INFO][loginUser]  SESSION ID: f0a81e75d0146e96d0f4747f49069e78c016fc54d4d4fba38b0f218275e2da3748f6aabfd4d49cc52def25cbbf04e07ff40579661a86c87c6a967253de643e56
+[2019/06/06 23:27:44][INFO][loginUser]  Checking for existing/active sessions...
+[2019/06/06 23:27:44][INFO][getSessionID]  Getting sessionID for aaa@aaa.aaa
+[2019/06/06 23:27:44][INFO][getSessionID]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:27:44][INFO][getSessionID]  Query succeeded
+[2019/06/06 23:27:44][INFO][isEmailInDB]  Checking if user is already in DB
+[2019/06/06 23:27:44][INFO][isEmailInDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.sessions WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:27:44][INFO][isEmailInDB]  Query Success. 
+[2019/06/06 23:27:44][INFO][isSessionActive]  Checking if user has active session...
+[2019/06/06 23:27:44][INFO][isSessionActive]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT * FROM cs122b_db143.sessions WHERE sessionID = '079aa67d8add547faab095851f054c1181c82f9c5087ad20beee44163e88d471a80208a2e829c4090ab35dca4814503ff929e49d1a831ea962774e90a22dc1d0' AND email = 'aaa@aaa.aaa' AND status = 1
+[2019/06/06 23:27:44][INFO][isSessionActive]  Query Success.
+[2019/06/06 23:27:44][INFO][loginUser]  Creating new session...
+[2019/06/06 23:27:44][INFO][insertSessionIntoDB]  Inserting user into database...
+[2019/06/06 23:27:44][INFO][insertSessionIntoDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO cs122b_db143.sessions (sessionID, email, status, timeCreated, lastUsed, exprTime) VALUES ('f0a81e75d0146e96d0f4747f49069e78c016fc54d4d4fba38b0f218275e2da3748f6aabfd4d49cc52def25cbbf04e07ff40579661a86c87c6a967253de643e56', 'aaa@aaa.aaa', 1, '2019-06-06 23:27:44.442', '2019-06-06 23:27:44.442', '2019-06-07 01:07:44.442')
+[2019/06/06 23:27:44][INFO][insertSessionIntoDB]  Query succeeded
+[2019/06/06 23:27:44][INFO][loginUser]  RegisterResponseModel{
+ResultCode: 120
+Message: User logged in successfully.
+SessionID: f0a81e75d0146e96d0f4747f49069e78c016fc54d4d4fba38b0f218275e2da3748f6aabfd4d49cc52def25cbbf04e07ff40579661a86c87c6a967253de643e56
+}
+[2019/06/06 23:27:50][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 23:27:50][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":3}
+[2019/06/06 23:27:50][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 23:27:50][INFO][userPrivilege]  Getting result code...
+[2019/06/06 23:27:50][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:27:50][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:27:50][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:27:50][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:27:50][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:27:50][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:27:50][INFO][getPriv]  Query succeeded
+[2019/06/06 23:27:50][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:27:50][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:27:50][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:27:50][INFO][getPriv]  Query succeeded
+[2019/06/06 23:27:50][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:27:50][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 23:27:50][INFO][userPrivilege]  Result code: 141
+[2019/06/06 23:27:50][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 23:27:50][INFO][userPrivilege]  Response: ok
+[2019/06/06 23:27:53][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 23:27:53][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":4}
+[2019/06/06 23:27:53][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 23:27:53][INFO][userPrivilege]  Getting result code...
+[2019/06/06 23:27:53][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:27:53][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:27:53][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:27:53][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:27:53][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:27:53][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:27:53][INFO][getPriv]  Query succeeded
+[2019/06/06 23:27:53][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:27:53][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:27:53][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:27:53][INFO][getPriv]  Query succeeded
+[2019/06/06 23:27:53][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:27:53][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 23:27:53][INFO][userPrivilege]  Result code: 141
+[2019/06/06 23:27:53][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 23:27:53][INFO][userPrivilege]  Response: ok
+[2019/06/06 23:28:06][INFO][userPrivilege]  Received request to validate user privileges
+[2019/06/06 23:28:06][INFO][userPrivilege]  Request:
+{"email":"aaa@aaa.aaa","plevel":3}
+[2019/06/06 23:28:06][INFO][userPrivilege]  Mapping JSON to request model
+[2019/06/06 23:28:06][INFO][userPrivilege]  Getting result code...
+[2019/06/06 23:28:06][INFO][hasValidEmail]  Testing password validity
+[2019/06/06 23:28:06][INFO][hasValidEmail]  EMAIL: aaa@aaa.aaa
+[2019/06/06 23:28:06][INFO][isEmailInDatabase]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:28:06][INFO][isEmailInDatabase]  Query Success. 
+[2019/06/06 23:28:06][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:28:06][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:28:06][INFO][getPriv]  Query succeeded
+[2019/06/06 23:28:06][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:28:06][INFO][getPriv]  Retrieving privilege level from database...
+[2019/06/06 23:28:06][INFO][getPriv]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT plevel FROM cs122b_db143.users WHERE email = 'aaa@aaa.aaa'
+[2019/06/06 23:28:06][INFO][getPriv]  Query succeeded
+[2019/06/06 23:28:06][INFO][getPriv]  Getting password from resultSet
+[2019/06/06 23:28:06][INFO][resultCode]  Not sufficient priv levels
+[2019/06/06 23:28:06][INFO][userPrivilege]  Result code: 141
+[2019/06/06 23:28:06][INFO][userPrivilege]  PrivilegeResponseModel{
+ResultCode: 141
+Message: User has insufficient privilege level.
+}
+[2019/06/06 23:28:06][INFO][userPrivilege]  Response: ok
