@@ -1,0 +1,39 @@
+let requestModel = "get the requestModel";
+let gateway_host = "<host>"; // in diff .js file 
+let url = gateway_host + ":" + port + path;
+
+insert200()
+{
+	// what to do when you get 200
+	// Original request(not report): shouldnt go here - only (session) errors return 200
+	// page that says error and can go back
+}
+
+insert204()
+{
+	// request went through to back end - waiting for response from...clientside(?)
+	// use report to get response - make another ajax
+}
+
+$.ajax(url{
+	url: "andromeda-70.ics.uci.edu:<portNum>/<api/g/endpoint>",
+	type: ["GET", "POST", "DELETE"],
+	data: JSON.stringfy(requestModel),
+	contentType: "application/json",
+
+	//function that gets call when 200 is recieved
+	success: function(responseModel){
+		insert200(); // what to do when you get 200
+	},
+	statusCode: {
+		204: function(responseModel){
+			insert204();
+		},
+		400: function(){
+			insert400();
+		},
+		500: function(){
+			insert500();
+		}
+	} 
+})
